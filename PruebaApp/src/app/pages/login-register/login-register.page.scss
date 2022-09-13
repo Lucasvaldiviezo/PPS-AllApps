@@ -1,0 +1,35 @@
+.contenedorBotones {
+    //position: relative;
+    //top: 5%;
+    //left: 5%;
+    width: 90%;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.iconoBack{
+    width: 30px;
+    position: relative;
+    left:-1%;
+}
+ion-content {
+    // overwrite inline styles
+    //--overflow: hidden;
+    //overflow: auto;
+    margin-top: 20%;
+}
+
+.botonLogearse{
+    width: 50px;
+    padding: 5px;
+}
+
+
+
+
+// .contenedorLogin{
+//     position: relative;
+//     top:20%;
+//     width: 100%;
+//     height: auto;
+// }

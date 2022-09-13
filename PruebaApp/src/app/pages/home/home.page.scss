@@ -1,0 +1,63 @@
+.contenedorInicio{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: rgb(12,93,237);
+background: linear-gradient(176deg, rgba(12,93,237,1) 0%, rgba(0,134,154,1) 100%);
+  border-radius: 10px;
+  position: relative;
+  width: 80%;
+  min-height: 200px;
+  top:20%;
+  left:10%;
+}
+
+.iconoUsuario{
+  width: 40px;
+  position: relative;
+  left:40%;
+}
+
+.logoUTN{
+  position: relative;
+  padding: 20px;
+  top:10%;
+}
+.botonCerrarSesion{
+  margin-top:5%;
+}
+
+.texto{
+  margin-top:2%;
+  margin-bottom: 1%;
+}
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+

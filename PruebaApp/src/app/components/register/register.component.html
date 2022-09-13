@@ -1,0 +1,25 @@
+<div class="contenedorGeneral">
+  <ion-title class="texto">Sign-Up</ion-title>
+  <form [formGroup]="formRegistro" (ngSubmit)="registrarse()" class="texto">
+    <div>
+      <ion-input placeholder="Email" formControlName="email"></ion-input>
+      <small class="invalid"
+        *ngIf="formRegistro.controls['email'].errors?.['required'] && formRegistro.controls['email'].touched">
+        <label class="errorText">El email es requerido</label>
+      </small>
+      <small class="invalid" *ngIf="formRegistro.controls['email'].errors?.['email'] &&
+            formRegistro.controls['email'].touched">
+        <ion-label>El email no tiene el formato correcto</ion-label>
+      </small>
+    </div><br>
+    <div>
+      <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+      <small class="invalid"
+        *ngIf="formRegistro.controls['password'].errors?.['required'] && formRegistro.controls['password'].touched">
+        <ion-label>El password es requerido</ion-label>
+      </small>
+    </div>
+    <ion-button type="sumbit" color="warning" class="botonRegistrarse" [disabled]="!formRegistro.valid">Registrarse
+    </ion-button><br>
+  </form>
+</div>

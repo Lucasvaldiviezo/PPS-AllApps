@@ -1,0 +1,78 @@
+.error {
+    text-align: center;
+}
+
+.invalid {
+    color: rgb(0, 0, 0);
+}
+
+.contenedorGeneral {
+    text-align: center;
+    background: rgb(217, 182, 129);
+    background: linear-gradient(0deg, rgba(217, 182, 129, 1) 0%, rgba(56, 128, 255, 1) 100%);
+    border-radius: 10px;
+    position: relative;
+    width: 85%;
+    min-height: 150px;
+    margin-top: 40%;
+    margin-left:7.5%;
+    padding-top: 1px;
+}
+
+.texto {
+    margin-top: 5%;
+}
+
+ion-input {
+    background-color: rgba(255, 255, 255, 0.781);
+    border-radius: 10px;
+    width: 93%;
+    margin-left: 3.5%;
+    margin-right: 3.5%;
+    margin-bottom: 3.5%;
+    text-align: left;
+    color: black
+}
+
+.botonEntrar {
+    margin-top: 8%;
+    margin-bottom: 8%;
+}
+
+.iconoUsuario1 {
+    width: 70px;
+}
+
+.iconoUsuario1:active{
+    transform: scale(0.9);
+}
+
+.iconoUsuario2 {
+    width: 70px;
+}
+
+.iconoUsuario2:active{
+    transform: scale(0.9);
+}
+
+.iconoUsuario3 {
+     width: 70px;
+}
+
+.iconoUsuario3:active{
+    transform: scale(0.9);
+}
+
+.contenedorBotones{
+    margin-top: 20%;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.botones {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}

@@ -1,0 +1,39 @@
+.error {
+    text-align: center;
+}
+
+.invalid {
+    color: rgb(0, 0, 0);
+}
+
+.contenedorGeneral {
+    text-align: center;
+    background: rgb(129, 217, 132);
+    background: linear-gradient(0deg, rgba(129, 217, 132, 1) 0%, rgba(56, 128, 255, 1) 100%);
+    border-radius: 10px;
+    width: 85%;
+    min-height: 150px;
+    margin-top: 40%;
+    margin-left:7.5%;
+    left: 7.5%;
+    padding-top: 1px;
+}
+
+.texto {
+    margin-top: 5%;
+}
+
+ion-input {
+    background-color: rgba(255, 255, 255, 0.781);
+    border-radius: 10px;
+    width: 93%;
+    margin-left: 3.5%;
+    margin-right: 3.5%;
+    margin-bottom: 3.5%;
+    text-align: left;
+}
+
+.botonRegistrarse {
+    margin-top: 8%;
+    margin-bottom: 8%;
+}

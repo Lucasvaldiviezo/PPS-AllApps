@@ -1,0 +1,32 @@
+<div class="contenedorGeneral">
+  <ion-title class="texto">Login</ion-title>
+  <form [formGroup]="formRegistro" (ngSubmit)="loguearse()" class="texto">
+    <div>
+      <ion-input placeholder="Email" formControlName="email"></ion-input>
+      <small class="invalid"
+        *ngIf="formRegistro.controls['email'].errors?.['required'] && formRegistro.controls['email'].touched">
+        <label class="errorText">El email es requerido</label>
+      </small>
+      <small *ngIf="formRegistro.controls['email'].errors?.['email'] &&
+            formRegistro.controls['email'].touched">
+        <ion-label class="invalid">El email no tiene el formato correcto</ion-label>
+      </small>
+    </div><br>
+    <div>
+      <ion-input type="password" placeholder="Password" formControlName="password"></ion-input>
+      <small class="invalid"
+        *ngIf="formRegistro.controls['password'].errors?.['required'] && formRegistro.controls['password'].touched">
+        <ion-label>El password es requerido</ion-label>
+      </small>
+    </div>
+    <ion-button type="sumbit" color="danger" fill="solid" class="botonEntrar" [disabled]="!formRegistro.valid">Entrar
+    </ion-button><br>
+  </form>
+</div>
+<div class="contenedorBotones">
+  <div class="botones">
+    <ion-img src="/assets/user1.png" class="iconoUsuario1" (click)="logeoAutomatico('a@a.com','123456')"></ion-img>
+    <ion-img src="/assets/user2.png" class="iconoUsuario2" (click)="logeoAutomatico('b@b.com','123456')"></ion-img>
+    <ion-img src="/assets/user3.png" class="iconoUsuario3" (click)="logeoAutomatico('c@c.com','111111')"></ion-img>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<ion-item color="primary">
+  <ion-title>Inicio</ion-title>
+</ion-item>
+<ion-content padding text-center>
+  <div text-center class="logoUTN">
+    <ion-img src="/assets/logo-utn.png" ></ion-img>
+  </div>
+  <div class="contenedorInicio">
+    <div *ngIf="userState|async as user;else login_buttons"><br>
+      <ion-img src="/assets/person-circle.svg" class="iconoUsuario"></ion-img>
+      <div class="texto">
+        <ion-label>Bienvenido:</ion-label><br>
+        <ion-label>{{user.email}}</ion-label>
+      </div>
+      <ion-button (click)="desloguearse()" class="botonCerrarSesion" color="warning">Cerrar Sesion</ion-button>
+    </div>
+  </div>
+  <ng-template #login_buttons>
+    <ion-button [routerLink]="['/login-register']" class="botonIniciarSesion" color="warning">Iniciar Sesion</ion-button>
+  </ng-template>
+</ion-content>

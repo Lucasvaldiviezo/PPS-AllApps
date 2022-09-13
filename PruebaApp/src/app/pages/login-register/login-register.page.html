@@ -1,0 +1,19 @@
+<ion-content fullscreen scroll-y>
+  <ion-item color="primary">
+    <ion-img (click)="VolverAInicio()" src="/assets/back-icon.svg" class="iconoBack"></ion-img>
+  </ion-item>
+  
+  <ion-segment color="primary" value="login/register" swipe-gesture="true" (ionChange)="segmentChanged($event)">
+    <ion-segment-button value="login">
+      <ion-icon name="log-in-outline"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="sign-up">
+      <ion-icon name="person-add-outline"></ion-icon>
+    </ion-segment-button>
+  </ion-segment>
+
+  <!-- <div *ngIf="mostrarVentanaLogeo" class="contenedorLogin"> -->
+    <app-login *ngIf="mostrarVentanaLogeo" ></app-login>
+  <!-- </div> -->
+  <app-register *ngIf="mostrarVentanaRegistro"></app-register>
+</ion-content>
