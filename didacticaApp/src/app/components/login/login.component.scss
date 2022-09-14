@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@600&display=swap');
 
 .fondo {
     width: 100%;
@@ -30,9 +30,10 @@
     -webkit-box-shadow: 10px 8px 19px -7px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 10px 8px 19px -7px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 8px 19px -7px rgba(0, 0, 0, 0.75);
-    font-family: 'Roboto', sans-serif;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    font-family: 'Advent Pro', sans-serif;
+    font-size: 16px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
 }
 
 .contenedorTitulo
@@ -40,8 +41,8 @@
     width: 100%;
     height: 80px;
     background-color: rgb(38, 161, 38);
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
 }
 
 .contenedorInputs {
@@ -60,9 +61,7 @@ ion-input {
     margin-bottom: 5%;
     text-align: left;
     color: black;
-    border-color: #3538ff;
-    border-width: 2px;
-    border-style: groove;
+    font-family: 'Advent Pro', sans-serif;
 }
 
 .botonEntrar {
@@ -70,14 +69,15 @@ ion-input {
     margin-bottom: 10%;
     width: 180px;
     height: 40px;
-    border-radius: 10px;
-    background: #3538ff;
-    font-size: 15px;
+    border-radius: 2px;
+    background: #da4a4a;
+    font-size: 20px;
 }
 
 .invalid {
     text-align: center;
-    color: rgb(255, 255, 255);
+    color: rgb(255, 52, 52);
+    font-size: 15px;
 }
 
 .iconoUsuario {
@@ -94,16 +94,4 @@ ion-input {
     height: auto;
     display: flex;
     justify-content: center;
-}
-
-.botones {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-}
-
-.botonDiseño {
-    border-radius: 20px;
-    background: rgb(53, 56, 255);
-    background: linear-gradient(0deg, rgba(53, 56, 255, 1) 0%, rgba(255, 78, 78, 1) 100%);
 }

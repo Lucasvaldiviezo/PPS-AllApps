@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@600&display=swap');
+
+ion-content {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+
+    .contenedor {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        background: url('/assets/background.jpg') 15% 100% no-repeat;
+    }
+
+    .divLogo {
+        width: 100%;
+     
+    }
+
+    .divTexto {
+        margin-top: 30%;
+    }
+
+    .divLoading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: auto;
+    }
+
+    .logoImg {
+        width: 200px;
+        margin-left:50%;
+        -webkit-animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+
+    .loadingImg {
+        width: 200px;
+    }
+
+    .texto {
+        font-family: 'Advent Pro', sans-serif;
+        font-size: 30px;
+        color: black;
+    }
+}
+
+
+/**
+ * ----------------------------------------
+ * animation slide-left
+ * ----------------------------------------
+ */
+ @-webkit-keyframes slide-left {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(-100px);
+              transform: translateX(-100px);
+    }
+  }
+  @keyframes slide-left {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(-100px);
+              transform: translateX(-100px);
+    }
+  }

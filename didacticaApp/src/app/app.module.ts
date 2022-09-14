@@ -11,11 +11,13 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { LoginComponent } from './components/login/login.component';
+import { SplashComponent } from './components/splash/splash.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    SplashComponent
   ],
   imports: [
     BrowserModule, 
