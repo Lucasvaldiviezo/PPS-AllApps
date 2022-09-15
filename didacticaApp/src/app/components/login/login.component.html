@@ -32,7 +32,7 @@
             </small>
           </div>
           <!--ion-button type="sumbit" color="danger" fill="solid" class="botonEntrar" [disabled]="!formLogin.valid">Entrar</ion-button--><br>
-          <button type="sumbit" class="botonEntrar">Entrar</button>
+          <button type="sumbit" class="botonEntrar" [disabled]="!formLogin.valid">Entrar</button>
         </form>
       </div>
     </div>
@@ -42,13 +42,13 @@
       </ion-fab-button>
       <ion-fab-list side="start">
         <ion-fab-button color="primary">
-          <ion-img src="/assets/son.png" ></ion-img>
+          <ion-img src="/assets/son.png" (click)="logeoAutomatico('admin@admin.com','111111')"></ion-img>
         </ion-fab-button>
         <ion-fab-button color="secondary">
-          <ion-img src="/assets/daughter.png" class="daughterIcon"></ion-img>
+          <ion-img src="/assets/daughter.png" (click)="logeoAutomatico('invitado@invitado.com','222222')"></ion-img>
         </ion-fab-button>
         <ion-fab-button color="tertiary">
-          <ion-img src="/assets/child.png" ></ion-img>
+          <ion-img src="/assets/child.png" (click)="logeoAutomatico('usuario@usuario.com','333333')"></ion-img>
         </ion-fab-button>
       </ion-fab-list>
     </ion-fab>

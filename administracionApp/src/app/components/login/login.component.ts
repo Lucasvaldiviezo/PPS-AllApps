@@ -3,6 +3,7 @@ import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/authService/auth.service';
 import { ToastController } from '@ionic/angular';
+import { Key } from 'protractor';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -17,17 +18,35 @@ export class LoginComponent implements OnInit {
     email: '',
     password: ''
   }
-  
-  constructor(public fb: FormBuilder,public ruteo: Router, public authService: AuthService, private toastController: ToastController) { 
+
+  constructor(public fb: FormBuilder, public ruteo: Router, public authService: AuthService, private toastController: ToastController) {
     this.formLogin = this.fb.group({
       'email': ['', [Validators.required, Validators.email]],
       'password': ['', [Validators.required]],
     });
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
-  loguearse(){
+  logs: string[] = [];
+
+
+  handleChange(e) {
+    console.log(e.detail.value);
+    switch (e.detail.value) {
+      case 'usuario1':
+        this.logeoAutomatico('admin@admin.com', '111111');
+        break;
+      case 'usuario2':
+        this.logeoAutomatico('invitado@invitado.com', '222222')
+        break;
+      case 'usuario3':
+        this.logeoAutomatico('usuario@usuario.com', '333333')
+        break;
+    }
+  }
+
+  loguearse() {
     try {
       const email = this.formLogin.getRawValue().email;
       const password = this.formLogin.getRawValue().password;
@@ -64,28 +83,34 @@ export class LoginComponent implements OnInit {
               this.errorMessage = 'Error';
               break;
           }
-          this.presentToast('middle','danger');
+          this.presentToast('top', 'medium');
         });
     } catch (error) {
       console.log("Error al ingresar", error);
     }
   }
 
-  logeoAutomatico(email:string,password:string){
+  logeoAutomatico(email: string, password: string) {
     this.formLogin.controls['email'].setValue(email);
     this.formLogin.controls['password'].setValue(password);
     this.loguearse();
   }
 
-  async presentToast(position: 'top' | 'middle' | 'bottom', color: 'primary' | 'danger') {
+  async presentToast(position: 'top' | 'middle' | 'bottom', color: 'primary' | 'light' | 'medium') {
     const toast = await this.toastController.create({
       message: this.errorMessage,
-      duration: 1500,
       position: position,
       color: color,
+      icon: 'key',
+      buttons: [
+        {
+          text: 'Ok',
+          role: 'cancel'
+        }]
     });
 
     await toast.present();
   }
 
 }
+

@@ -1,0 +1,45 @@
+<ion-content>
+  <div class="fondo">
+    <br>
+      <ion-title class="titulo">Logeo Rapido</ion-title>
+      <ion-item color="light">
+        <ion-select interface="popover" color="medium" placeholder="Elegir usuario"   
+        (ionChange)="handleChange($event)">
+          <ion-select-option value="usuario1">Usuario 1</ion-select-option>
+          <ion-select-option value="usuario2">Usuario 2</ion-select-option>
+          <ion-select-option value="usuario3">Usuario 3</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+
+    <div class="contenedorGeneral">
+      <br>
+      <ion-img src="assets/user-icon-shape.svg" class="logoUser"></ion-img>
+      <ion-title class="titulo2">Iniciar Sesion</ion-title>
+      <div class="contenedorInputs">
+        <form [formGroup]="formLogin" (ngSubmit)="loguearse()" class="texto">
+          <div>
+            <ion-input placeholder="Correo" formControlName="email"></ion-input>
+            <small class="invalid"
+              *ngIf="formLogin.controls['email'].errors?.['required'] && formLogin.controls['email'].touched">
+              <label>El correo es requerido</label>
+            </small>
+            <small *ngIf="formLogin.controls['email'].errors?.['email'] &&
+                  formLogin.controls['email'].touched">
+              <label class="invalid">Formato Incorrecto</label>
+            </small>
+          </div><br>
+          <div>
+            <ion-input type="password" placeholder="Contraseña" formControlName="password"></ion-input>
+            <small class="invalid"
+              *ngIf="formLogin.controls['password'].errors?.['required'] && formLogin.controls['password'].touched">
+              <label>La contraseña es requerida</label>
+            </small>
+          </div>
+          <!--ion-button type="sumbit" color="danger" fill="solid" class="botonEntrar" [disabled]="!formLogin.valid">Entrar</ion-button--><br>
+          <button type="sumbit" class="botonEntrar" [disabled]="!formLogin.valid">Ingresar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</ion-content>

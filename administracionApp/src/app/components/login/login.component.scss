@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+
+.fondo {
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 255, 255);
+    text-align: center;
+}
+
+
+.contenedorGeneral {
+    text-align: center;
+    background-color: rgb(192, 192, 192);
+    width: 80%;
+    min-height: 340px;
+    margin-top: 20%;
+    margin-left: 10%;
+    box-shadow: 10px 10px #888888;
+    //-webkit-box-shadow: 10px 8px 19px -7px rgba(0, 0, 0, 0.75);
+    //-moz-box-shadow: 10px 8px 19px -7px rgba(0, 0, 0, 0.75);
+    //box-shadow: 10px 8px 19px -7px rgba(0, 0, 0, 0.75);
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    font-size: 16px;
+}
+
+.titulo {
+    font-size: 25px;
+    color: black;
+    margin-top:15%;
+}
+
+.titulo2{
+    font-size: 25px;
+    color: black;
+    margin-top:5%;
+}
+
+.logoUser{
+    width: 50px;
+    margin-left:38%;
+}
+
+
+.contenedorInputs {
+    margin-top: 13%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+ion-input {
+    background-color: rgba(255, 255, 255, 0.781);
+    width: 90%;
+    margin-left: 3.5%;
+    margin-right: 3.5%;
+    margin-bottom: 5%;
+    text-align: left;
+    color: black;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+ion-item{
+    width: 62%;
+    margin-left:20%;
+    margin-top:10%;
+    box-shadow: 5px 5px #b3b1b1;
+}
+
+.botonEntrar {
+    margin-top: 5%;
+    margin-bottom: 10%;
+    width: 180px;
+    height: 40px;
+    border-radius: 2px;
+    background: #222428;
+    font-size: 15px;
+    
+}
+
+.invalid {
+    text-align: center;
+    color: rgb(230, 103, 103);
+    font-size: 15px;
+}
+
+.iconoUsuario {
+    width: 60px;
+}
+
+.iconoUsuario:active {
+    transform: scale(0.9);
+}
+
+.contenedorBotones {
+    margin-top: 10%;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
