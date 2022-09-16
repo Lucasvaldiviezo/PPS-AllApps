@@ -1,3 +1,4 @@
-<ion-app>
+<app-splash *ngIf="cargarTerminada == false"></app-splash>
+<ion-app *ngIf="cargarTerminada">
   <ion-router-outlet></ion-router-outlet>
 </ion-app>

@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+
+.fondo {
+    width: 100%;
+    height: 100%;
+    background: rgb(255, 183, 116);
+    text-align: center;
+}
+
+.logo {
+    width: 100px;
+    margin-left: 35%;
+    margin-top: 5%;
+}
+
+.titulo {
+    font-size: 25px;
+    margin-top: 5%;
+    color: black;
+}
+
+.titulo2{
+    font-size: 20px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    color: black;
+}
+
+.contenedorGeneral {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 78%;
+    margin-top: 5%;
+    font-family: 'Arvo', serif;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.contenedorInputs {
+    margin-top: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+ion-input {
+    width: 90%;
+    margin-left: 3.5%;
+    text-align: left;
+    color: black;
+    font-family: 'Arvo', serif;
+}
+
+ion-label{
+    font-family: 'Arvo', serif;
+}
+
+.botonEntrar {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 180px;
+    height: 50px;
+    background: #ff3c35;
+    font-size: 20px;
+}
+
+.invalid {
+    text-align: center;
+    color: #ff3c35;
+}
+
+.error{
+    color: #ffffff;
+    margin-top: 5%;
+
+}
+
+.chip1{
+    background-color: #ff3c35;
+}
+
+.chip2{
+    background-color: #ff9735;
+}
+
+.chip3{
+    background-color: #ffd13a;
+}
+
+.textoChip{
+    color: black;
+}

@@ -1,21 +1,11 @@
 <ion-content>
   <div class="fondo">
     <br>
-      <ion-title class="titulo">Inicio Rapido</ion-title>
-      <ion-item color="light">
-        <ion-select interface="popover" color="medium" placeholder="Elegir usuario"   
-        (ionChange)="handleChange($event)">
-          <ion-select-option value="usuario1">Usuario 1</ion-select-option>
-          <ion-select-option value="usuario2">Usuario 2</ion-select-option>
-          <ion-select-option value="usuario3">Usuario 3</ion-select-option>
-        </ion-select>
-      </ion-item>
-
-
+    <ion-img src="/assets/app-icon.png" class="logo"></ion-img>
     <div class="contenedorGeneral">
       <br>
-      <ion-img src="assets/user-icon-shape.svg" class="logoUser"></ion-img>
-      <ion-title class="titulo2">Iniciar Sesión</ion-title>
+
+      <ion-title class="titulo">Iniciar Sesión</ion-title><br>
       <div class="contenedorInputs">
         <form [formGroup]="formLogin" (ngSubmit)="loguearse()" class="texto">
           <div>
@@ -26,7 +16,7 @@
             </small>
             <small *ngIf="formLogin.controls['email'].errors?.['email'] &&
                   formLogin.controls['email'].touched">
-              <label class="invalid">Formato Incorrecto</label>
+              <label class="invalid">El correo no tiene el formato correcto</label>
             </small>
           </div><br>
           <div>
@@ -35,11 +25,15 @@
               *ngIf="formLogin.controls['password'].errors?.['required'] && formLogin.controls['password'].touched">
               <label>La contraseña es requerida</label>
             </small>
-          </div>
-          <!--ion-button type="sumbit" color="danger" fill="solid" class="botonEntrar" [disabled]="!formLogin.valid">Entrar</ion-button--><br>
+          </div><br>
           <button type="sumbit" class="botonEntrar" [disabled]="!formLogin.valid">Ingresar</button>
         </form>
       </div>
+    </div><br>
+    <div class="contenedorBotones">
+      <ion-img src="assets/user1.png" class="iconoUsuario" (click)="logeoAutomatico('admin@admin.com','111111')"></ion-img>
+      <ion-img src="assets/user2.png" class="iconoUsuario" (click)="logeoAutomatico('invitado@invitado.com','222222')"></ion-img>
+      <ion-img src="assets/user3.png" class="iconoUsuario" (click)="logeoAutomatico('usuario@usuario.com','333')"></ion-img>
     </div>
   </div>
 </ion-content>

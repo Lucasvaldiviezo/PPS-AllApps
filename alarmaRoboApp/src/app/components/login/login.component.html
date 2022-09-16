@@ -1,0 +1,63 @@
+<ion-content>
+  <div class="fondo">
+    <br>
+    <ion-img src="/assets/app-icon.png" class="logo"></ion-img>
+    <div class="contenedorGeneral">
+      <br>
+      
+      <ion-title class="titulo">Iniciar Sesión</ion-title><br>
+      <ion-item  *ngIf="mostrarError" color="danger" class="item-error">
+        <ion-label class="error" position="middle">{{errorMessage}}</ion-label>
+        <ion-icon name="close" (click)="esconderError()"></ion-icon>
+      </ion-item>
+      <div class="contenedorInputs">
+        <form [formGroup]="formLogin" (ngSubmit)="loguearse()" class="texto">
+          <div>
+            <ion-item color="dark">
+              <ion-input placeholder="Correo" formControlName="email"></ion-input>
+              <ion-icon name="person-outline"></ion-icon>
+            </ion-item>
+            <small class="invalid"
+              *ngIf="formLogin.controls['email'].errors?.['required'] && formLogin.controls['email'].touched">
+              <label>El correo es requerido</label>
+            </small>
+            <small *ngIf="formLogin.controls['email'].errors?.['email'] &&
+                  formLogin.controls['email'].touched">
+              <label class="invalid">El correo no tiene el formato correcto</label>
+            </small>
+          </div><br>
+          <div>
+            <ion-item color="dark">
+            <ion-input type="password" placeholder="Contraseña" formControlName="password"></ion-input>
+            <ion-icon name="key-outline"></ion-icon>
+            </ion-item>
+            <small class="invalid"
+              *ngIf="formLogin.controls['password'].errors?.['required'] && formLogin.controls['password'].touched">
+              <label>La contraseña es requerida</label>
+            </small>
+          </div>
+          <button type="sumbit" class="botonEntrar" [disabled]="!formLogin.valid">Ingresar</button>
+        </form>
+      </div>
+      <ion-title class="titulo2">Inicio Rapido:</ion-title>
+      <ion-chip class="chip1" (click)="logeoAutomatico('admin@admin.com','111111')">
+        <ion-avatar>
+          <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg" />
+        </ion-avatar>
+        <ion-label class="textoChip">Admin</ion-label>
+      </ion-chip>
+      <ion-chip class="chip2" (click)="logeoAutomatico('invitado@invitado.com','222222')">
+        <ion-avatar>
+          <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg" />
+        </ion-avatar>
+        <ion-label class="textoChip">Invitado</ion-label>
+      </ion-chip>
+      <ion-chip class="chip3" (click)="logeoAutomatico('usuario@usuario.com','3333')">
+        <ion-avatar>
+          <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg" />
+        </ion-avatar>
+        <ion-label class="textoChip">Usuario</ion-label>
+      </ion-chip>
+    </div>
+  </div>
+</ion-content>
