@@ -1,39 +1,35 @@
 <ion-content>
-  <div class="fondo">
-    <br>
     <ion-img src="/assets/app-icon.png" class="logo"></ion-img>
+    <br>
     <div class="contenedorGeneral">
       <br>
-
       <ion-title class="titulo">Iniciar Sesión</ion-title><br>
       <div class="contenedorInputs">
         <form [formGroup]="formLogin" (ngSubmit)="loguearse()" class="texto">
-          <div>
+          <div class="divInput">
             <ion-input placeholder="Correo" formControlName="email"></ion-input>
-            <small class="invalid"
-              *ngIf="formLogin.controls['email'].errors?.['required'] && formLogin.controls['email'].touched">
-              <label>El correo es requerido</label>
-            </small>
-            <small *ngIf="formLogin.controls['email'].errors?.['email'] &&
-                  formLogin.controls['email'].touched">
-              <label class="invalid">El correo no tiene el formato correcto</label>
-            </small>
-          </div><br>
+            <label class="invalid"
+              *ngIf="formLogin.controls['email'].errors?.['required'] && formLogin.controls['email'].touched">El correo
+              es requerido</label>
+            <label class="invalid" *ngIf="formLogin.controls['email'].errors?.['email'] &&
+            formLogin.controls['email'].touched">El correo no tiene el formato correcto</label>
+          </div>
           <div>
             <ion-input type="password" placeholder="Contraseña" formControlName="password"></ion-input>
-            <small class="invalid"
-              *ngIf="formLogin.controls['password'].errors?.['required'] && formLogin.controls['password'].touched">
-              <label>La contraseña es requerida</label>
-            </small>
-          </div><br>
-          <button type="sumbit" class="botonEntrar" [disabled]="!formLogin.valid">Ingresar</button>
+            <label class="invalid"
+              *ngIf="formLogin.controls['password'].errors?.['required'] && formLogin.controls['password'].touched">La
+              contraseña es requerida</label>
+          </div>
         </form>
-      </div>
-    </div><br>
-    <div class="contenedorBotones">
-      <ion-img src="assets/user1.png" class="iconoUsuario" (click)="logeoAutomatico('admin@admin.com','111111')"></ion-img>
-      <ion-img src="assets/user2.png" class="iconoUsuario" (click)="logeoAutomatico('invitado@invitado.com','222222')"></ion-img>
-      <ion-img src="assets/user3.png" class="iconoUsuario" (click)="logeoAutomatico('usuario@usuario.com','333')"></ion-img>
+      </div><br>
+      <button type="sumbit" class="botonEntrar" [disabled]="!formLogin.valid">Ingresar</button>
     </div>
-  </div>
+    <div class="contenedorBotones">
+      <ion-img src="assets/user1.png" class="iconoUsuario" (click)="logeoAutomatico('admin@admin.com','111111')">
+      </ion-img>
+      <ion-img src="assets/user2.png" class="iconoUsuario" (click)="logeoAutomatico('invitado@invitado.com','222222')">
+      </ion-img>
+      <ion-img src="assets/user3.png" class="iconoUsuario" (click)="logeoAutomatico('usuario@usuario.com','333')">
+      </ion-img>
+    </div>
 </ion-content>

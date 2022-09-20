@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+
+ion-content{
+  --background: url('/assets/fondito.png') 0 0/100% 100% no-repeat;
+}
+
+.fondo {
+  width: 100%;
+  height: 100%;
+  font-family: 'Mukta', sans-serif;
+}
+
+.titulo{
+  text-align: center;
+  margin-top:22%;
+  font-size: 45px;
+}
+
+
+.contenedorBotones {
+  width: 100%;
+  min-height: 50%;
+  margin-top: 20%;
+  text-align: center;
+  
+}
+
+
+.botonChatA {
+  width: 80%;
+  height: 180px;
+  -webkit-box-shadow: 10px 8px 19px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 8px 19px -7px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 8px 19px -7px rgba(0, 0, 0, 0.75);
+  border-width: 2px;
+  border-style: solid;
+  border-color:#fea832;
+  background-color: #4279c5;
+  font-size: 20px;
+}
+
+.botonChatB {
+  margin-top: 10%;
+  width: 80%;
+  height: 180px;
+  -webkit-box-shadow: 10px 8px 19px -7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 8px 19px -7px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 8px 19px -7px rgba(0, 0, 0, 0.75);
+  border-width: 2px;
+  border-style: solid;
+  border-color:#136ef1;
+  background-color: #d19c51;
+  font-size: 20px;
+}
+
+.iconoChat{
+  width: 100px;
+  margin-left:auto;
+  margin-right: auto;
+  margin-top:5%;
+}

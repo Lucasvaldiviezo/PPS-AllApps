@@ -1,5 +1,5 @@
 {
-	"appId": "io.ionic.starter",
+	"appId": "relevamiento.app",
 	"appName": "relevamientoApp",
 	"webDir": "www",
 	"bundledWebRuntime": false

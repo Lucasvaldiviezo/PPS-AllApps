@@ -4,14 +4,13 @@
       <ion-title class="titulo">Inicio Rapido</ion-title>
       <ion-item color="light">
         <ion-select interface="popover" color="medium" placeholder="Elegir usuario"   
-        (ionChange)="handleChange($event)">
-          <ion-select-option value="usuario1">Usuario 1</ion-select-option>
-          <ion-select-option value="usuario2">Usuario 2</ion-select-option>
-          <ion-select-option value="usuario3">Usuario 3</ion-select-option>
+        (ionChange)="handleChange($event)" class="select">
+          <ion-select-option value="usuario1">Admin</ion-select-option>
+          <ion-select-option value="usuario2">Invitado</ion-select-option>
+          <ion-select-option value="usuario3">Usuario</ion-select-option>
         </ion-select>
       </ion-item>
-
-
+      
     <div class="contenedorGeneral">
       <br>
       <ion-img src="assets/user-icon-shape.svg" class="logoUser"></ion-img>

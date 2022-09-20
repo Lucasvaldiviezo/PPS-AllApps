@@ -1,27 +1,48 @@
-#container {
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+ion-content{
+  --ion-background-color: rgb(255, 183, 116);
   text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.contenedorGeneral{
+  text-align: center;
+  height: 100%;
+  font-family: 'Arvo', serif;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+.titulo{
+  margin-top:10%;
+  color:white;
+  font-size: 30px;
 }
 
-#container a {
-  text-decoration: none;
+.titulo2{
+  margin-top:45%;
+  color: #ff3c35;
+}
+
+.titulo3{
+  margin-top:45%;
+  color: #0a9416;
+}
+
+.contenedorBoton{
+  margin-top: 0%;
+}
+
+.botonPower{
+  width: 180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.botonPower:active{
+  transform: scale(0.9);
+}
+
+.btnLogout{
+  width: 150px;
+  height: 50px;
+  background-color: #ff3c35;
+  margin-top: 20%;
 }

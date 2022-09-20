@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   timeLeft: number = 3;
   interval:any;
-  cargarTerminada:boolean = false;
+  cargarTerminada:boolean = true;
   constructor() {}
 
   ngOnInit():void{

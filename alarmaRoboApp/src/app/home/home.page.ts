@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from '../services/authService/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +8,19 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  alarmOnOff:boolean = false;
+  constructor(public ruteo: Router, public authService: AuthService) {}
+  cambiarAlarma(){
+    if(this.alarmOnOff == false){
+      this.alarmOnOff = true;
+    }else
+    {
+      this.alarmOnOff = false;
+    }
+  }
 
-  constructor() {}
-
+  logout(){
+    this.authService.logout();
+    this.ruteo.navigateByUrl('login');
+  }
 }

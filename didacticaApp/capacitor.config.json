@@ -1,5 +1,5 @@
 {
-	"appId": "io.ionic.starter",
+	"appId": "didactica.app",
 	"appName": "didacticaApp",
 	"webDir": "www",
 	"bundledWebRuntime": false

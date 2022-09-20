@@ -28,18 +28,17 @@ ion-content {
     .texto{
         font-family: 'Arvo', serif;
         font-size: 30px;
+        color: white;
     }
 
     .nombre{
-        margin-right: 61%;
-        -webkit-animation: slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .division{
-        margin-left: 61%;
-        -webkit-animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+      margin-left: auto;
+      margin-right: auto;
     }
 }
 

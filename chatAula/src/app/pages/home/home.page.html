@@ -1,0 +1,15 @@
+<ion-content>
+  <div class="fondo">
+    <ion-fab horizontal="end" vertical="top" slot="fixed">
+      <ion-fab-button color="warning" (click)="logout()">
+        <ion-icon name="log-out-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab><br>
+    <ion-title class="titulo">Bienvenido!</ion-title>
+    <div class="contenedorBotones">
+      
+      <button class="botonChatA" [routerLink]="['/chat4-a']">Chat 4A<ion-img src="/assets/ChatA.png" class="iconoChat" ></ion-img></button><br>
+      <button class="botonChatB" [routerLink]="['/chat4-b']">Chat 4B<ion-img src="/assets/ChatB.png" class="iconoChat"></ion-img></button>
+    </div>
+  </div>
+</ion-content>

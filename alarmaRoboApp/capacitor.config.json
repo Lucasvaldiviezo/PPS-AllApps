@@ -1,5 +1,5 @@
 {
-	"appId": "io.ionic.starter",
+	"appId": "alarma.robo.app",
 	"appName": "alarmaRoboApp",
 	"webDir": "www",
 	"bundledWebRuntime": false
