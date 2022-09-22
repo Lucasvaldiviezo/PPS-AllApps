@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-item color="primary">
+  <ion-item color="warning">
     <ion-label class="titulo">Conversacion 4A</ion-label>
   </ion-item>
 </ion-header>
@@ -7,21 +7,17 @@
   <div class="chatCompleto">
     <div class="contenedorMensajes">
       <div *ngFor="let mensaje of mensajes" class="cuadroMensaje"
-      [ngClass]="(usuarioActual.usuarioId==mensaje.emisor)?'enviado' : 'recibido'">
-      <ion-label class="usuarioMensaje">{{mensaje.usuario}}:</ion-label><br>
-      <ion-label>{{mensaje.texto}}</ion-label><br>
-      <ion-label class="horaMensaje">{{mensaje.hora | date:'shortTime'}}</ion-label>
+        [ngClass]="(usuarioActual.usuarioId==mensaje.emisor)?'enviado' : 'recibido'">
+        <ion-label class="usuarioMensaje" *ngIf="(usuarioActual.usuarioId==mensaje.emisor)==false">{{mensaje.usuario}}:
+        </ion-label>
+        <ion-label class="textoMensaje">{{mensaje.texto}}</ion-label>
+        <ion-label class="horaMensaje">{{mensaje.hora | date:'mediumDate'}}</ion-label>
       </div>
     </div>
-    <!--ion-footer align-title="center" class="bar-balanced">
-      <ion-item color="primary">
-        <ion-input class="inputMensaje" placeholder="Ingrese su mensaje" [(ngModel)]="nuevoMensaje"></ion-input>
-        <ion-img src="/assets/send-icon.png" (click)="enviarMensaje()" class="iconoEnviar"></ion-img>
-      </ion-item>
-    </ion-footer-->
     <div class="contenedorEnviar">
-      <ion-item color="primary">
-        <ion-input class="inputMensaje" placeholder="Ingrese su mensaje" [(ngModel)]="nuevoMensaje"></ion-input>
+      <ion-item color="warning">
+        <ion-input class="inputMensaje" placeholder="Ingrese su mensaje" [(ngModel)]="nuevoMensaje"
+          maxlength="21"></ion-input>
         <ion-img src="/assets/send-icon.png" (click)="enviarMensaje()" class="iconoEnviar"></ion-img>
       </ion-item>
     </div>

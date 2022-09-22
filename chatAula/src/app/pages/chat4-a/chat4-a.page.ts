@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/authService/auth.service';
 import { FirestoreService } from 'src/app/services/firestoreService/firestore.service';
@@ -9,6 +9,7 @@ import { FirestoreService } from 'src/app/services/firestoreService/firestore.se
   styleUrls: ['./chat4-a.page.scss'],
 })
 export class Chat4APage implements OnInit {
+  //@ViewChild('cuadroMensaje') private myScrollContainer: ElementRef;
   today:Date;
   userLogged: any;
   nuevoMensaje: string = '';
@@ -55,7 +56,7 @@ export class Chat4APage implements OnInit {
         this.mensajes.push(mensaje);
         this.nuevoMensaje = '';
         /*setTimeout(() => {
-          //this.scrollToTheLastElementByClassName();
+          this.scrollToTheLastElementByClassName();
         }, 10);*/
         this.fireStoreService.addToChat(mensaje,this.mensajes.length,"4A");
       }
@@ -73,13 +74,10 @@ export class Chat4APage implements OnInit {
     }
   }
 
-  /*scrollToTheLastElementByClassName(){
-    let elements=document.getElementsByClassName('msj');
-    let ultimoEle:any = elements[(elements.length - 1)];
-    let toppos=ultimoEle.offsetTop;
-
-    //@ts-ignore
-    document.getElementById('contenedorDeMensajes')?.scrollTop=toppos;
+  /*crollToTheLastElementByClassName(){
+    let elements=document.getElementsByClassName('cuadroMensaje');
+    elements.scrollTop = elements.scrollHeight;
+  
   }*/
 
 }

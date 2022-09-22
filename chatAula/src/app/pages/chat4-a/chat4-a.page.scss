@@ -1,9 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
 ion-content {
-    --ion-background-color: rgb(214, 214, 145);
+    --ion-background-color: rgb(77, 106, 185);
     overflow: hidden;
-    
+    font-family: 'Mukta', sans-serif;
 }
-
 .iconoBack {
     width: 30px;
     position: relative;
@@ -21,7 +21,7 @@ ion-content {
 
 .contenedorMensajes {
     overflow-y:scroll;
-    height: 93%;
+    height: 91.3%;
 }
 
 .contenedorEnviar {
@@ -47,53 +47,61 @@ ion-content {
     height: 40px;
     color: black;
     margin-left: 5%;
-    margin-bottom: 2%;
-    ;
+    margin-bottom: 2%;;
     margin-top: 3%;
 }
 
 .enviado {
     display: block;
     float: right;
-    background-color: rgb(64, 151, 151);
+    background-color: rgb(199, 83, 83);
     color: white;
     min-width: 50.01%;
     border-radius: 10px;
     text-align: left;
     padding: 7px 7px 7px 7px;
-    margin-top:1%;
-    margin-bottom: 5%;
-    margin-right: 3%;
+    margin-top:0.5%;
+    margin-bottom: 0.8%;
+    margin-right: 1%;
+    margin-left: 5%;
 }
 
 .recibido {
     display: block;
     float: left;
-    background-color: gray;
-    color: white;
+    background-color: rgb(42, 42, 141);
+    color: rgb(255, 255, 255);
     min-width: 50.01%;
     border-radius: 10px;
     text-align: left;
     padding: 7px 7px 7px 7px;
-    margin-top:1%;
-    margin-bottom: 5%;
-    margin-left: 3%;
-}
-
-.cuadroMensaje{
-    
+    margin-top:0.5%;
+    margin-bottom: 0.8%;
+    margin-left: 1%;
+    margin-right: 5%;
+    white-space: pre-wrap;
 }
 
 .usuarioMensaje {
     font-size: 15px;
-    color: black;
-    text-shadow: 1px 0 0 #fff, -1px 0 0 #fff, 0 1px 0 #fff, 0 -1px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+    color: rgb(224, 96, 96);
     font-weight: 500;
-    cursor: pointer;
+    position: relative;
+    width: 100%;
+    display: block;
+    font-family: 'Mukta', sans-serif;
+}
+
+.textoMensaje{
+    font-size: 14px;
+    font-family: 'Mukta', sans-serif;
 }
 
 .horaMensaje {
+    position: relative;
     color: rgb(187, 187, 187);
     font-size: 13px;
-    float: right;
+    float:right;
+    margin-top:1%;
+    margin-left:1%;
 }

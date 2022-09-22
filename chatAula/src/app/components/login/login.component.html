@@ -1,9 +1,9 @@
-<ion-content>
+<ion-content fullscreen>
     <ion-img src="/assets/app-icon.png" class="logo"></ion-img>
     <br>
     <div class="contenedorGeneral">
       <br>
-      <ion-title class="titulo">Iniciar Sesión</ion-title><br>
+      <ion-title class="titulo">Iniciar Sesión</ion-title>
       <div class="contenedorInputs">
         <form [formGroup]="formLogin" (ngSubmit)="loguearse()" class="texto">
           <div class="divInput">
@@ -21,7 +21,7 @@
               contraseña es requerida</label>
           </div>
         </form>
-      </div><br>
+      </div>
       <button type="sumbit" class="botonEntrar" [disabled]="!formLogin.valid">Ingresar</button>
     </div>
     <div class="contenedorBotones">

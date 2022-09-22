@@ -1,58 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
 
-ion-content{
-    --background: url('/assets/fondito.png') 0% 100% no-repeat;
-    position: absolute;
+ion-content {
+    --ion-background-color: rgb(39, 223, 115);
 }
+
 .logo {
     width: 180px;
-    margin-top:10%;
-    margin-left:auto;
-    margin-right:auto;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .titulo {
     font-size: 25px;
     color: black;
+    text-align: center;
 }
 
 
 .contenedorGeneral {
-    position: relative;
-    text-align: center;
+    position:relative;
     background-color: rgb(255, 255, 255);
     width: 80%;
-    min-height: 40%;
-    margin-top: 11%;
-    margin-left:auto;
-    margin-right:auto;
+    min-height: 50%;
+    margin-left: auto;
+    margin-right: auto;
     font-family: 'Mukta', sans-serif;
     -webkit-box-shadow: 10px 8px 19px -7px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 10px 8px 19px -7px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 8px 19px -7px rgba(0, 0, 0, 0.75);
-   
+    top:3%;
+
 }
 
 .contenedorInputs {
     width: 100%;
+    height: 60%;
+    text-align: center;
+    position: relative;
+    margin-top:20%;
 }
 
-.divInput{
-    margin-bottom: 5%;
-}
 
 .botonEntrar {
     width: 100%;
-    height: 50px;
+    height: 60px;
     background: #fea832;
     font-size: 20px;
-    position: relative;
-    bottom: 0;
-    left: 0;
+    margin-top:35%;
 }
 
 ion-input {
-    width:90%;
+    width: 90%;
     text-align: left;
     margin-left: auto;
     margin-right: auto;
@@ -60,33 +59,36 @@ ion-input {
     font-family: 'Mukta', sans-serif;
     background-color: #1370f173;
     border-radius: 2px;
+    margin-top: 15%;
 }
 
-ion-label{
+ion-label {
     font-family: 'Mukta', sans-serif;
 }
 
-.iconoUsuario{
-    width: 80px; 
-    margin-left:2%;
+.iconoUsuario {
+    width: 26%;
+    margin-left: 2%;
 }
 
 
-.contenedorBotones{
+.contenedorBotones {
     display: flex;
     justify-content: space-around;
     width: 100%;
     position: relative;
-    top:5%;
+    top: 8.35%;
 }
 
 
 .invalid {
-    text-align: center;
     color: #ff3c35;
     font-size: 15px;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 100%;
 }
 
-ion-toast{
-    --max-width:10%;
+ion-toast {
+    --max-width: 10%;
 }
