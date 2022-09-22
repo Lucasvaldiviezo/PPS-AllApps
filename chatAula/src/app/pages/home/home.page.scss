@@ -16,19 +16,22 @@ ion-content{
   font-size: 45px;
 }
 
+.texto{
+  text-align: center;
+  font-size: 25px;
+}
 
 .contenedorBotones {
   width: 100%;
   min-height: 50%;
   margin-top: 20%;
   text-align: center;
-  
 }
 
 
 .botonChatA {
-  width: 80%;
-  height: 180px;
+  width: 85%;
+  height: 250px;
   -webkit-box-shadow: 10px 8px 19px -7px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 8px 19px -7px rgba(0, 0, 0, 0.75);
   box-shadow: 10px 8px 19px -7px rgba(0, 0, 0, 0.75);
@@ -41,8 +44,8 @@ ion-content{
 
 .botonChatB {
   margin-top: 10%;
-  width: 80%;
-  height: 180px;
+  width: 85%;
+  height: 250px;
   -webkit-box-shadow: 10px 8px 19px -7px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 8px 19px -7px rgba(0, 0, 0, 0.75);
   box-shadow: 10px 8px 19px -7px rgba(0, 0, 0, 0.75);

@@ -3,9 +3,9 @@
     <ion-label class="titulo">Conversacion 4A</ion-label>
   </ion-item>
 </ion-header>
-<ion-content class="has-footer">
+<ion-content #content [scrollEvents]="true">
   <div class="chatCompleto">
-    <div class="contenedorMensajes">
+    <div class="contenedorMensajes" id="contenedorMensajes">
       <div *ngFor="let mensaje of mensajes" class="cuadroMensaje"
         [ngClass]="(usuarioActual.usuarioId==mensaje.emisor)?'enviado' : 'recibido'">
         <ion-label class="usuarioMensaje" *ngIf="(usuarioActual.usuarioId==mensaje.emisor)==false">{{mensaje.usuario}}:
