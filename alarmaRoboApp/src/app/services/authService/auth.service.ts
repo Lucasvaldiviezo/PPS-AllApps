@@ -25,6 +25,7 @@ export class AuthService {
     try{
       this.isUserLogged=true;
       this.actualPassword = password;
+      console.log(this.actualPassword);
       return await this.afauth.signInWithEmailAndPassword(email,password);
     }catch (error)
     {

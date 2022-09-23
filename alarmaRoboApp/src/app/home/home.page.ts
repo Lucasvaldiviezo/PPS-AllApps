@@ -6,12 +6,14 @@ import { DeviceMotion, DeviceMotionAccelerationData } from '@ionic-native/device
 import { Flashlight } from '@ionic-native/flashlight/ngx';
 import { Vibration } from '@ionic-native/vibration/ngx';
 import Swal from 'sweetalert2';
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+
   alarmOnOff: boolean = false;
   showDialog: boolean = false;
   estado = '';
@@ -46,26 +48,7 @@ export class HomePage {
 
   cambiarAlarma() {
     if (this.alarmOnOff == true) {
-      this.showDialog = true;
-      if (this.clave == this.authService.actualPassword) {//Comparacion de usuario registrado con la clave ingresada recientemente
-        this.estado = 'permitido';
-        setTimeout(() => {
-          this.alarmOnOff == false;
-          this.estado = "";
-          this.clave = "";
-          this.showDialog = false;
-          this.audio.pause();
-          this.parar(); ///Paro la subscripcion al acceleration
-        }, 1000);
-      }
-      else if (this.clave != '') {
-        this.estado = 'denegado';
-        setTimeout(() => {
-          this.estado = "";
-        }, 1000);
-        this.audio.src = this.audioError;
-        this.audio.play();
-      }
+      this.checkPassword();
     }
     else {
       this.alarmOnOff = true;
@@ -156,18 +139,54 @@ export class HomePage {
       this.posicionAnteriorCelular = 'plano';
       this.audio.src = this.audioHorizontal;
     }
-
     this.primerIngreso ? null : this.audio.play();
     this.primerIngreso ? null : this.vibration.vibrate(5000);
     this.primerIngreso = true;
     this.primerIngresoFlash = true;
   }
 
-
-  cancelarDesactivar() {
-    return this.showDialog = false;
+  errorApagado() {
+    if (this.primerIngresoFlash) {
+      this.primerIngresoFlash ? this.flashlight.switchOn() : null;
+      this.audio.src = this.audioError;
+      this.audio.play();
+      this.vibration.vibrate(5000);
+      setTimeout(() => {
+        this.primerIngresoFlash = false;
+        this.flashlight.switchOff();
+        this.vibration.vibrate(0);
+      }, 5000);
+    }
   }
 
+  async checkPassword() {
+    const { value: password } = await Swal.fire({
+      title: 'Ingresa tu contraseña',
+      input: 'password',
+      inputLabel: 'Contraseña',
+      inputPlaceholder: 'Ingresa tu contraseña',
+      heightAuto: false
+    });
+    this.clave = password;
+    if (this.clave == this.authService.actualPassword) {//Comparacion de usuario registrado con la clave ingresada recientemente
+      console.log("ENTRE");
+      this.estado = 'permitido';
+      this.alarmOnOff = false;
+      this.estado = "";
+      this.clave = "";
+      this.audio.pause();
+      this.parar(); ///Paro la subscripcion al acceleration
+    }
+    else if (this.clave != '') {
+      this.estado = 'denegado';
+      this.errorApagado();
+      setTimeout(() => {
+        this.estado = "";
+      }, 1000);
+
+    }
+    //Tambien hay que agregar la funcionalidad del login y demas.
+  }
 
   logout() {
     this.authService.logout();
