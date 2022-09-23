@@ -9,7 +9,7 @@
       <ion-img src="/assets/buttonOff.png" class="botonPower" (click)="cambiarAlarma()" *ngIf="alarmOnOff == false"></ion-img>
       <ion-img src="/assets/buttonOn.png" class="botonPower" (click)="cambiarAlarma()" *ngIf="alarmOnOff"></ion-img>
     </div>
-    <button class="btnLogout" (click)="logout()">Cerrar Sesión</button>
+    <button class="btnLogout" (click)="logout()" *ngIf="alarmOnOff == false">Cerrar Sesión</button>
   </div>
  
 </ion-content>

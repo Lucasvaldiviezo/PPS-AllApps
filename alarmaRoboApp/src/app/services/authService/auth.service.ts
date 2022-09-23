@@ -7,12 +7,15 @@ export class AuthService {
 
   constructor(public afauth: AngularFireAuth) { }
   isUserLogged:boolean = false;
+  actualPassword:string = "";
   async register(email:string,password:string)
   {
     try{
+      
       return await this.afauth.createUserWithEmailAndPassword(email,password);
     }catch(error)
     {
+      
       throw(error);
     }
   }
@@ -21,9 +24,11 @@ export class AuthService {
   {
     try{
       this.isUserLogged=true;
+      this.actualPassword = password;
       return await this.afauth.signInWithEmailAndPassword(email,password);
     }catch (error)
     {
+      this.actualPassword="";
       throw(error);
     }
   }
@@ -35,6 +40,7 @@ export class AuthService {
 
   logout()
   {
+    this.actualPassword = "";
     this.isUserLogged = false;
     this.afauth.signOut();
   }
