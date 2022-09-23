@@ -14,6 +14,7 @@ export class AppComponent {
   ngOnInit():void{
     this.startTimer();
   }
+
   startTimer() {
     this.interval = setInterval(() => {
       if(this.timeLeft > 0) {

@@ -5,9 +5,18 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
+import { DeviceMotion } from '@ionic-native/device-motion/ngx';
+import { Vibration } from '@ionic-native/vibration/ngx';
+import { Flashlight } from '@ionic-native/flashlight/ngx';
 
 
 @NgModule({
+  providers: [
+    DeviceMotion,
+    Vibration,
+    Flashlight,
+    
+  ],
   imports: [
     CommonModule,
     FormsModule,
