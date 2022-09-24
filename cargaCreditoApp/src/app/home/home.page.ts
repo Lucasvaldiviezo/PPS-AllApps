@@ -107,8 +107,8 @@ export class HomePage {
       if(variable1 < 2)
       {
         this.usuario.credito += valor;
-        variable1 ++;
-        this.MostrarToast('Credito de ' + valor + ' cargado',"Ok","success").then((toast : any) => {
+        variable1++;
+        this.MostrarToast('Crédito de ' + valor + ' cargado con exito!',"Crédito Cargado","success").then((toast : any) => {
           toast.present();
         });
       }
@@ -125,7 +125,7 @@ export class HomePage {
       {
         this.usuario.credito += valor;
         variable1 ++;
-        this.MostrarToast('Credito de ' + valor + ' cargado',"Ok","success").then((toast : any) => {
+        this.MostrarToast('Crédito de ' + valor + ' cargado con exito!',"Crédito Cargado","success").then((toast : any) => {
           toast.present();
         });
       }
