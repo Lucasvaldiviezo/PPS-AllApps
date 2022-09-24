@@ -58,8 +58,7 @@ export class HomePage {
             this.maximoAlcanzado = true;
           }
           break;
-
-        case "ae338e4e0cbb4e4bcffaf9ce5b409feb8edd5172":
+        case "ae338e4e0cbb4e4bcffaf9ce5b409feb8edd5172 ":
           this.establecerCarga(50);
           if(this.usuario.credito == this.usuario.maximo)
           {
@@ -69,7 +68,6 @@ export class HomePage {
             this.maximoAlcanzado = true;
           }
           break;
-
         case "2786f4877b9091dcad7f35751bfcf5d5ea712b2f":
           this.establecerCarga(100);
           if(this.usuario.credito == this.usuario.maximo)
@@ -84,7 +82,7 @@ export class HomePage {
     });
   }
 
-  establecerCarga(valor : any)
+  establecerCarga(valor : number)
   {
     let variable1 : any;
 
@@ -110,6 +108,9 @@ export class HomePage {
       {
         this.usuario.credito += valor;
         variable1 ++;
+        this.MostrarToast('Credito de ' + valor + ' cargado',"Ok","success").then((toast : any) => {
+          toast.present();
+        });
       }
       else
       {
@@ -124,10 +125,13 @@ export class HomePage {
       {
         this.usuario.credito += valor;
         variable1 ++;
+        this.MostrarToast('Credito de ' + valor + ' cargado',"Ok","success").then((toast : any) => {
+          toast.present();
+        });
       }
       else
       {
-        this.MostrarToast('Solo puede usar ese codigo 2 veces',"Error","danger").then((toast : any) => {
+        this.MostrarToast('Solo puede usar ese codigo 1 vez',"Error","danger").then((toast : any) => {
           toast.present();
         });
       }
@@ -149,7 +153,7 @@ export class HomePage {
       }
     }
 
-    this.firestore.modificarPerfil(this.usuario,this.usuario.id);
+    this.firestore.modificarPerfil(this.usuario,this.usuario.usuarioId);
   }
 
   MostrarToast(message : string, header : string, color : string)
@@ -172,8 +176,8 @@ export class HomePage {
     this.creditoActual = 0;
     this.maximoAlcanzado = false;
 
-    this.firestore.modificarPerfil(this.usuario,this.usuario.id).then(() =>{
-      this.MostrarToast('Se han eliminado los créditos con exito',"Créditos eliminados","success").then((toast : any) => {
+    this.firestore.modificarPerfil(this.usuario,this.usuario.usuarioId).then(() =>{
+      this.MostrarToast('Se han eliminado los créditos con exito',"Créditos eliminados","primary").then((toast : any) => {
         toast.present();
       });
     })
@@ -181,7 +185,7 @@ export class HomePage {
 
   vaciarCredito()
   {
-    this.MostrarToastVaciar("¿Desea vaciar su crédito?","","warning").then((toast : any) => {
+    this.MostrarToastVaciar("Eliminara su credito ¿desea continuar?","","warning").then((toast : any) => {
       toast.present();
     }); 
   }
@@ -204,7 +208,7 @@ export class HomePage {
                 role: 'cancel',
               }
             ],
-            position: 'top',
+            position: 'bottom',
             color : color
     });
   }
