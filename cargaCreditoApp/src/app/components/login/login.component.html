@@ -1,19 +1,9 @@
 <ion-content>
   <div class="fondo">
     <br>
-      <ion-title class="titulo">Inicio Rapido</ion-title>
-      <ion-item color="light">
-        <ion-select interface="popover" color="medium" placeholder="Elegir usuario"   
-        (ionChange)="handleChange($event)" class="select">
-          <ion-select-option value="usuario1">Admin</ion-select-option>
-          <ion-select-option value="usuario2">Invitado</ion-select-option>
-          <ion-select-option value="usuario3">Usuario</ion-select-option>
-        </ion-select>
-      </ion-item>
-      
     <div class="contenedorGeneral">
       <br>
-      <ion-img src="assets/user-icon-shape.svg" class="logoUser"></ion-img>
+      <ion-img src="assets/qr-code.png" class="logoUser"></ion-img>
       <ion-title class="titulo2">Iniciar Sesión</ion-title>
       <div class="contenedorInputs">
         <form [formGroup]="formLogin" (ngSubmit)="loguearse()" class="texto">
@@ -34,11 +24,19 @@
               *ngIf="formLogin.controls['password'].errors?.['required'] && formLogin.controls['password'].touched">
               <label>La contraseña es requerida</label>
             </small>
-          </div>
-          <!--ion-button type="sumbit" color="danger" fill="solid" class="botonEntrar" [disabled]="!formLogin.valid">Entrar</ion-button--><br>
-          <button type="sumbit" class="botonEntrar" [disabled]="!formLogin.valid">Ingresar</button>
+          </div><br>
         </form>
       </div>
+      <button type="sumbit" class="botonEntrar" [disabled]="!formLogin.valid">Ingresar</button>
     </div>
+    <ion-title class="titulo">Inicio Rapido</ion-title>
+    <ion-item color="light">
+      <ion-select interface="popover" color="medium" placeholder="Elegir usuario" (ionChange)="handleChange($event)"
+        class="select">
+        <ion-select-option value="usuario1">Admin</ion-select-option>
+        <ion-select-option value="usuario2">Invitado</ion-select-option>
+        <ion-select-option value="usuario3">Usuario</ion-select-option>
+      </ion-select>
+  </ion-item>
   </div>
 </ion-content>

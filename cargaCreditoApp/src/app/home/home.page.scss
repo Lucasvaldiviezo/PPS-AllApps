@@ -1,22 +1,86 @@
-ion-content{
-  --ion-background-color: rgb(255, 255, 255);
-    text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
+
+ion-spinner{
+  width: 50px;
+  height: 50px;
 }
 
-ion-header{
+ion-content{
+  --ion-background-color: rgb(255, 255, 255);
+  font-family: 'M PLUS Rounded 1c', sans-serif;
   text-align: center;
 }
 
-.titulo{
-  color: white;
+.displayUsuario
+{
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  background-color: #000000;
+  margin-bottom: 10%;
+  margin-top: 5%;
+  text-align: center;
+  
 }
 
-.btnCerrarSesion {
-  margin-top: 100%;
-  width: 180px;
-  height: 40px;
-  border-radius: 2px;
-  background: #222428;
-  font-size: 15px;
-  color: white;
+.btnLogout{
+  width: 15%;
+}
+
+.iconoCerrarSesion{
+  width: 30px;
+}
+
+.textoEmail{
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+.titulo{
+  font-size: 60px;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  margin-left:auto;
+  margin-right: auto;
+  color: black;
+}
+
+.textoCreditos{
+  font-size: 180px;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  position: relative;
+  top:15%;
+}
+
+.contenedorCreditos{
+  border-style: outset;
+  border-color: rgb(224, 192, 7);
+  border-width: 5px;
+  width: 95%;
+  height: 50%;
+  margin-left: auto; 
+  margin-right: auto;
+  box-shadow: 5px 5px #b3b1b1;
+  background-color: #000000;
+  margin-top: 5%;
+  text-align: center;
+}
+
+
+
+.container
+{
+  position: absolute;
+  bottom: 100px;
+  left: 110px;
+}
+
+.botonQR
+{
+    margin-top: 5%;
+    margin-bottom: 10%;
+    width: 90%;
+    height: 80px;
+    border-radius: 2px;
+    background: #222428;
+    font-size: 15px;
 }

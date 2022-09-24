@@ -1,6 +1,28 @@
-<ion-header>
-  <ion-title class="titulo">Home</ion-title>
-</ion-header>
 <ion-content>
-  <button class="btnCerrarSesion" (click)="logout()">Cerrar Sesión</button>
+
+  <ion-item class="displayUsuario">
+    <ion-icon name="person-outline" color="dark"></ion-icon>
+    <ion-label class="textoEmail">{{authService.email}}</ion-label>
+    <ion-button color="danger" class="btnLogout" (click)="logout()">
+      <ion-img src="assets/log-out-icon.svg" class="iconoCerrarSesion"></ion-img>
+    </ion-button>
+  </ion-item>
+  <ion-label class="titulo">Crédito</ion-label>
+  <div class="contenedorCreditos">
+    <ion-label class="textoCreditos">{{this.creditoActual}}</ion-label>
+  </div>
+
+  <div>
+    <div *ngIf="cargando" style="margin-top: 5%;">
+      <ion-spinner name="crescent" color="light"></ion-spinner>
+    </div>
+    <button class="botonQR" (click)="cargarCredito()"
+      [disabled]="this.maximoAlcanzado" *ngIf="cargando==false">Escanear QR</button>
+  </div>
+  
+  <ion-button color="warning" (click)="vaciarCredito()" [disabled]="this.creditoActual == 0">
+    <ion-icon name="trash-sharp"></ion-icon>
+  </ion-button>
+
+
 </ion-content>

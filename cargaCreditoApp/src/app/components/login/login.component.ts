@@ -32,7 +32,6 @@ export class LoginComponent implements OnInit {
 
 
   handleChange(e) {
-    console.log(e.detail.value);
     switch (e.detail.value) {
       case 'usuario1':
         this.logeoAutomatico('admin@admin.com', '111111');

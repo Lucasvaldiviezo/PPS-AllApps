@@ -1,4 +1,4 @@
-package administracion.app;
+package carga.credito.app;
 
 import com.getcapacitor.BridgeActivity;
 
