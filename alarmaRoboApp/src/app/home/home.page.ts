@@ -49,6 +49,7 @@ export class HomePage {
   cambiarAlarma() {
     if (this.alarmOnOff == true) {
       this.checkPassword();
+      this.authService.actualEmail;
     }
     else {
       this.alarmOnOff = true;

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { SelectInterface } from '@ionic/core';
 @Injectable({
   providedIn: 'root'
 })
@@ -8,6 +9,7 @@ export class AuthService {
   constructor(public afauth: AngularFireAuth) { }
   isUserLogged:boolean = false;
   actualPassword:string = "";
+  actualEmail:string="";
   async register(email:string,password:string)
   {
     try{
@@ -25,6 +27,7 @@ export class AuthService {
     try{
       this.isUserLogged=true;
       this.actualPassword = password;
+      this.actualEmail = email;
       console.log(this.actualPassword);
       return await this.afauth.signInWithEmailAndPassword(email,password);
     }catch (error)
@@ -42,6 +45,7 @@ export class AuthService {
   logout()
   {
     this.actualPassword = "";
+    this.actualEmail = "";
     this.isUserLogged = false;
     this.afauth.signOut();
   }

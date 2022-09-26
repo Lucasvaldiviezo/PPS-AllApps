@@ -12,18 +12,36 @@ ion-content{
 
 .titulo{
   margin-top:10%;
-  color:white;
-  font-size: 30px;
+  color:rgb(0, 0, 0);
+  font-size: 45px;
+}
+
+.displayUsuario
+{
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  background-color: #000000;
+  margin-bottom: 10%;
+  margin-top: 5%;
+  text-align: center;
+}
+
+
+.email{
+  font-size: 15px;
+  color: white;
 }
 
 .titulo2{
-  margin-top:30%;
+  margin-top:10%;
   font-size: 30px;
   color: #ff3c35;
 }
 
 .titulo3{
-  margin-top:30%;
+  margin-top:10%;
   font-size: 30px;
   color: #0a9416;
 }

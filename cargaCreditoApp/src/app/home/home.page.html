@@ -7,7 +7,14 @@
       <ion-img src="assets/log-out-icon.svg" class="iconoCerrarSesion"></ion-img>
     </ion-button>
   </ion-item>
-  <ion-label class="titulo">Crédito</ion-label>
+  
+  <div class="divTitulo">
+    <ion-label class="titulo">Crédito</ion-label>
+  </div>
+  <ion-button color="warning" class="btnEliminar" (click)="vaciarCredito()" [disabled]="this.creditoActual == 0">
+    <ion-icon name="trash-sharp"></ion-icon>
+  </ion-button>
+  
   <div class="contenedorCreditos">
     <ion-label class="textoCreditos">{{this.creditoActual}}</ion-label>
   </div>
@@ -17,12 +24,10 @@
       <ion-spinner name="crescent" color="light"></ion-spinner>
     </div>
     <button class="botonQR" (click)="cargarCredito()"
-      [disabled]="this.maximoAlcanzado" *ngIf="cargando==false">Escanear QR</button>
+      [disabled]="this.maximoAlcanzado" *ngIf="cargando==false"><ion-img src="assets/qr-code.png" class="logoIcono"></ion-img></button>
   </div>
   
-  <ion-button color="warning" (click)="vaciarCredito()" [disabled]="this.creditoActual == 0">
-    <ion-icon name="trash-sharp"></ion-icon>
-  </ion-button>
+  
 
 
 </ion-content>

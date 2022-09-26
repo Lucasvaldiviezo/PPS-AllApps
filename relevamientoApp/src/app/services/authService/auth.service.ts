@@ -6,6 +6,7 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 export class AuthService {
 
   constructor(public afauth: AngularFireAuth) { }
+  actualEmail:string="";
   isUserLogged:boolean = false;
   async register(email:string,password:string)
   {
@@ -21,9 +22,11 @@ export class AuthService {
   {
     try{
       this.isUserLogged=true;
+      this.actualEmail = email;
       return await this.afauth.signInWithEmailAndPassword(email,password);
     }catch (error)
     {
+      this.actualEmail = "";
       throw(error);
     }
   }
@@ -35,6 +38,7 @@ export class AuthService {
 
   logout()
   {
+    this.actualEmail = "";
     this.isUserLogged = false;
     this.afauth.signOut();
   }

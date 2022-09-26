@@ -1,0 +1,10 @@
+<div *ngIf="this.perfil == 1">
+  <div style="margin-bottom: 10px;" *ngFor="let item of this.misFotos">
+  <ion-card>
+      <img src="{{item.pathFoto}}" />
+      <ion-card-header>
+      <ion-card-subtitle>{{item.hora}}</ion-card-subtitle>
+      </ion-card-header>
+  </ion-card>
+  </div>
+</div>   

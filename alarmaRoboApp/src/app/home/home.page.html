@@ -2,6 +2,10 @@
   <div class="contenedorGeneral">
     <br>
     <ion-title class="titulo">Anti-Robo</ion-title>
+    <ion-item class="displayUsuario">
+      <ion-title class="email">{{authService.actualEmail}}</ion-title>
+    </ion-item>
+    
     <br>
     <ion-title class="titulo2" *ngIf="alarmOnOff == false">Activar Alarma</ion-title>
     <ion-title class="titulo3" *ngIf="alarmOnOff">Desactivar Alarma</ion-title>

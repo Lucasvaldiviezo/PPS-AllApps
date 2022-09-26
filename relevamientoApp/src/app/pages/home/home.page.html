@@ -1,0 +1,54 @@
+<ion-content>
+  <div class="fondo">
+    <ion-fab horizontal="start" vertical="top" slot="fixed" *ngIf="this.opcion == 0 && this.perfil == 0">
+      <ion-fab-button color="danger" style="width: 50px; height: 50px;" (click)="logout()">
+        <ion-icon name="log-out-outline" style="font-size: 30px;"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+    <ion-header *ngIf="this.opcion != 0 || this.perfil != 0">
+      <ion-toolbar color="light">
+        <ion-title *ngIf="this.opcion == 1 && this.perfil == 0" style="font-size: 30px;">Cosas Lindas</ion-title>
+        <ion-title *ngIf="this.opcion == 2 && this.perfil == 0" style="font-size: 30px;">Cosas Feas</ion-title>
+        <ion-title *ngIf="this.perfil != 0" style="font-size: 30px;">Mis Fotos</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-fab horizontal="end" vertical="bottom" slot="fixed" *ngIf="this.opcion != 0 || this.perfil != 0">
+      <ion-fab-button color="dark" >
+        <ion-icon name="settings-sharp"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-list side="top">
+        <ion-fab-button color="warning"  (click)="cargarPerfil(0)" *ngIf="this.perfil != 0">
+          <ion-icon name="folder-open" ></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button color="warning" (click)="cargarPerfil(1)" *ngIf="this.perfil != 1">
+          <ion-icon name="images-sharp" ></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button color="success" (click)="subirFoto()" *ngIf="this.perfil == 0">
+          <ion-icon name="add-circle-sharp" style="font-size: 40px;"></ion-icon>
+        </ion-fab-button>
+      </ion-fab-list>
+      <ion-fab-list side="start">
+        <ion-fab-button color="dark"  (click)="volverInicio()">
+          <ion-icon name="home"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button color="danger" (click)="logout()">
+          <ion-icon name="log-out-outline" ></ion-icon>
+        </ion-fab-button>              
+      </ion-fab-list>
+    </ion-fab>
+
+    <ion-title class="titulo" *ngIf="this.opcion==0">Relavamiento</ion-title>
+    <div class="contenedorBotones" *ngIf="this.opcion==0">
+      <button class="botonChatA" (click)="mostrarCosasLindas()"></button><br>
+      <button class="botonChatB" (click)="mostrarCosasFeas()"></button>
+    </div>
+    <div  *ngIf="this.opcion != 0 && this.perfil == 0">
+      <app-cosas-lindas-feas [opcion]="this.opcion"></app-cosas-lindas-feas>
+    </div>
+    <div *ngIf="this.perfil != 0">
+      <app-perfil [perfil]="this.perfil"></app-perfil>
+    </div>
+  </div>
+  <ion-spinner *ngIf="this.cargando" name="crescent"></ion-spinner>
+  
+</ion-content>

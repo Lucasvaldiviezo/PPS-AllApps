@@ -6,7 +6,7 @@ ion-spinner{
 }
 
 ion-content{
-  --ion-background-color: rgb(255, 255, 255);
+  --background: linear-gradient(#ff7070, #fdffbd);
   font-family: 'M PLUS Rounded 1c', sans-serif;
   text-align: center;
 }
@@ -36,11 +36,24 @@ ion-content{
   font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
+.divTitulo{
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.btnEliminar{
+ margin-left: auto;
+ margin-right: auto;
+  height: 40px;
+  border-radius: 50%;
+}
+
 .titulo{
   font-size: 60px;
   font-family: 'M PLUS Rounded 1c', sans-serif;
-  margin-left:auto;
-  margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;  
   color: black;
 }
 
@@ -51,36 +64,38 @@ ion-content{
   top:15%;
 }
 
+
+
 .contenedorCreditos{
   border-style: outset;
-  border-color: rgb(224, 192, 7);
+  border-color: rgb(74, 221, 99);
   border-width: 5px;
   width: 95%;
   height: 50%;
   margin-left: auto; 
   margin-right: auto;
-  box-shadow: 5px 5px #b3b1b1;
+  box-shadow: 5px 5px #7d8f76;
   background-color: #000000;
   margin-top: 5%;
   text-align: center;
-}
-
-
-
-.container
-{
-  position: absolute;
-  bottom: 100px;
-  left: 110px;
 }
 
 .botonQR
 {
     margin-top: 5%;
     margin-bottom: 10%;
-    width: 90%;
-    height: 80px;
-    border-radius: 2px;
-    background: #222428;
+    width: 30%;
+    min-height: 80px;
+    border-radius: 20px;
+    background: #e44a4a;
+    box-shadow: 5px 5px #8f5a5a;
     font-size: 15px;
+    padding: 5px;
 }
+
+.logoIcono{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+

@@ -37,7 +37,6 @@ export class LoginComponent implements OnInit {
             if (res == null) {
               console.log("error al logearse", res);
             } else {
-              console.log("ingreso!: ", res);
               this.mostrarError = false;
               this.ruteo.navigateByUrl('home');
               this.formLogin.reset();
