@@ -27,7 +27,6 @@ export class PerfilComponent implements OnInit {
         this.misFotos.sort(this.ordenarLista); 
       });
     });
-
   }
 
   ordenarLista(foto1 : any,foto2 : any)
@@ -132,6 +131,5 @@ export class PerfilComponent implements OnInit {
       }
     }
   }
-
 
 }

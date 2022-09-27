@@ -6,11 +6,11 @@
       </ion-fab-button>
     </ion-fab>
     <ion-header *ngIf="this.opcion != 0 || this.perfil != 0">
-      <ion-toolbar color="light">
-        <ion-title *ngIf="this.opcion == 1 && this.perfil == 0" style="font-size: 30px;">Cosas Lindas</ion-title>
-        <ion-title *ngIf="this.opcion == 2 && this.perfil == 0" style="font-size: 30px;">Cosas Feas</ion-title>
-        <ion-title *ngIf="this.perfil != 0" style="font-size: 30px;">Mis Fotos</ion-title>
-      </ion-toolbar>
+      <ion-item class="header">
+        <ion-title *ngIf="this.opcion == 1 && this.perfil == 0" class="tituloHeader">Cosas Lindas</ion-title>
+        <ion-title *ngIf="this.opcion == 2 && this.perfil == 0" class="tituloHeader">Cosas Feas</ion-title>
+        <ion-title *ngIf="this.perfil != 0" class="tituloHeader">Mis Fotos</ion-title>
+      </ion-item>
     </ion-header>
     <ion-fab horizontal="end" vertical="bottom" slot="fixed" *ngIf="this.opcion != 0 || this.perfil != 0">
       <ion-fab-button color="dark" >
@@ -36,8 +36,9 @@
         </ion-fab-button>              
       </ion-fab-list>
     </ion-fab>
-
-    <ion-title class="titulo" *ngIf="this.opcion==0">Relavamiento</ion-title>
+    <div class="contenedorTitulo" *ngIf="this.opcion==0">
+      <ion-title class="titulo" >Inicio</ion-title>
+    </div>
     <div class="contenedorBotones" *ngIf="this.opcion==0">
       <button class="botonChatA" (click)="mostrarCosasLindas()"></button><br>
       <button class="botonChatB" (click)="mostrarCosasFeas()"></button>
