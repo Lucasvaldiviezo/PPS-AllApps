@@ -3,6 +3,7 @@ import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/authService/auth.service';
 import { ToastController } from '@ionic/angular';
+import { SpeechRecognition } from '@awesome-cordova-plugins/speech-recognition/ngx';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -12,22 +13,22 @@ export class LoginComponent implements OnInit {
   public formLogin: FormGroup;
   errorMessage: string = "";
   mostrarError = false;
-
+  matches: string[];
   user = {
     email: '',
     password: ''
   }
-  
-  constructor(public fb: FormBuilder,public ruteo: Router, public authService: AuthService, private toastController: ToastController) { 
+
+  constructor(public fb: FormBuilder, public ruteo: Router, public authService: AuthService, private toastController: ToastController, private speechRecognition: SpeechRecognition) {
     this.formLogin = this.fb.group({
       'email': ['', [Validators.required, Validators.email]],
       'password': ['', [Validators.required]],
     });
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
-  loguearse(){
+  loguearse() {
     try {
       const email = this.formLogin.getRawValue().email;
       const password = this.formLogin.getRawValue().password;
@@ -63,14 +64,14 @@ export class LoginComponent implements OnInit {
               this.errorMessage = 'Error';
               break;
           }
-          this.presentToast('bottom','danger');
+          this.presentToast('bottom', 'danger');
         });
     } catch (error) {
       console.log("Error al ingresar", error);
     }
   }
 
-  logeoAutomatico(email:string,password:string){
+  logeoAutomatico(email: string, password: string) {
     this.formLogin.controls['email'].setValue(email);
     this.formLogin.controls['password'].setValue(password);
     this.loguearse();
@@ -87,4 +88,35 @@ export class LoginComponent implements OnInit {
     await toast.present();
   }
 
+  ingresoPorVoz() {
+    let options = {
+      language: 'es-ES',
+    }
+    this.getPermission();
+    this.speechRecognition.startListening(options).subscribe(matches => {
+      this.matches = matches;
+      for (let i = 0; i < this.matches.length; i++) {
+        switch (this.matches[i]) {
+          case 'admin':
+            this.logeoAutomatico('admin@admin.com', '111111');
+            break;
+          case 'invitado':
+            this.logeoAutomatico('invitado@invitado.com', '222222');
+            break;
+          case 'usuario':
+            this.logeoAutomatico('usuario@usuario.com','3333');
+            break;
+        }
+      }
+    });
+  }
+
+  getPermission() {
+    this.speechRecognition.hasPermission()
+      .then((hasPermission: boolean) => {
+        if (!hasPermission) {
+          this.speechRecognition.requestPermission();
+        }
+      });
+  }
 }

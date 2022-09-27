@@ -10,7 +10,7 @@ import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { LoginComponent } from './components/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SplashComponent } from './components/splash/splash.component';
-import { PerfilComponent } from './components/perfil/perfil.component';
+import { SpeechRecognition } from '@awesome-cordova-plugins/speech-recognition/ngx';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,9 +24,8 @@ import { PerfilComponent } from './components/perfil/perfil.component';
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
-
   ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy},SpeechRecognition],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -1,5 +1,4 @@
 <ion-content>
-  <div class="fondo">
     <ion-fab horizontal="start" vertical="top" slot="fixed" *ngIf="this.opcion == 0 && this.perfil == 0">
       <ion-fab-button color="danger" style="width: 50px; height: 50px;" (click)="logout()">
         <ion-icon name="log-out-outline" style="font-size: 30px;"></ion-icon>
@@ -49,7 +48,6 @@
     <div *ngIf="this.perfil != 0">
       <app-perfil [perfil]="this.perfil"></app-perfil>
     </div>
-  </div>
   <ion-spinner *ngIf="this.cargando" name="crescent"></ion-spinner>
   
 </ion-content>

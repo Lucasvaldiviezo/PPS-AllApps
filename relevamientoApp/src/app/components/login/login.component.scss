@@ -2,6 +2,8 @@
 
 ion-content{
     --ion-background-color: rgb(179, 234, 255);
+    width: 100%;
+    text-align: center;
 }
 
 .fondo {
@@ -18,7 +20,7 @@ ion-content{
 }
 
 .titulo {
-    font-size: 25px;
+    font-size: 35px;
     margin-top: 5%;
 }
 
@@ -26,7 +28,7 @@ ion-content{
     text-align: center;
     background-color: rgb(255, 78, 78);
     width: 80%;
-    min-height: 340px;
+    min-height:60%;
     margin-top: 5%;
     margin-left: 10%;
     border-radius: 20px;
@@ -46,9 +48,11 @@ ion-content{
 ion-input {
     background-color: rgba(255, 255, 255, 0.781);
     border-radius: 10px;
-    width: 90%;
-    margin-left: 3.5%;
-    margin-right: 3.5%;
+    width: 100%;
+    height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
     margin-bottom: 5%;
     text-align: left;
     color: black;
@@ -58,44 +62,43 @@ ion-input {
 }
 
 .botonEntrar {
-    margin-top: 5%;
-    margin-bottom: 10%;
-    width: 180px;
-    height: 40px;
+    margin-top: 15%;
+    width: 100%;
+    height: 25%;
     border-radius: 10px;
     background: #3538ff;
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .invalid {
-    text-align: center;
     color: rgb(255, 255, 255);
+    font-size: 15px;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 100%;
 }
 
-.iconoUsuario {
-    width: 60px;
+.btnVoice{
+    border-radius: 50%;
+    width: 22%;
+    height: 10%;
+    background: rgb(53, 56, 255);
+    background: linear-gradient(0deg, rgba(53, 56, 255, 1) 0%, rgba(255, 78, 78, 1) 100%);
+    margin-top:13%;
 }
 
-.iconoUsuario:active {
+.btnVoice:active{
     transform: scale(0.9);
 }
 
-.contenedorBotones {
-    margin-top: 10%;
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
+.iconVoice{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.botones {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-}
-
-.botonDiseño {
+/*.botonDiseño {
     border-radius: 20px;
     background: rgb(53, 56, 255);
     background: linear-gradient(0deg, rgba(53, 56, 255, 1) 0%, rgba(255, 78, 78, 1) 100%);
-}
+}*/
