@@ -119,7 +119,11 @@ export class PerfilComponent implements OnInit {
     {
       if(item.email == this.authService.actualEmail)
       {
-        this.misFotos.push(item);
+        let itemLindo = {
+          datos: item,
+          tipo: 'linda',
+        }
+        this.misFotos.push(itemLindo);
       }
     }
 
@@ -127,7 +131,11 @@ export class PerfilComponent implements OnInit {
     {
       if(item.email == this.authService.actualEmail)
       {
-        this.misFotos.push(item);
+        let itemFeo = {
+          datos: item,
+          tipo: 'fea',
+        }
+        this.misFotos.push(itemFeo);
       }
     }
   }
