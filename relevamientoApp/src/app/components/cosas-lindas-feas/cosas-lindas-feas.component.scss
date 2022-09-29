@@ -1,17 +1,27 @@
-ion-card{
-    margin:5%;
-
-    
+ion-card {
+    margin: 5%;
 }
 
-ion-card-subtitle{
+ion-card-subtitle {
     color: white;
 }
 
-.cosasLindas{
+.cosasLindas {
     background-color: rgb(66, 156, 66);
 }
 
-.cosasFeas{
+.cosasFeas {
     background-color: rgb(124, 82, 201);
+}
+
+.contenedorLikes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.numeroLikes {
+    color: white;
+    margin-left: 1%;
+    margin-top:1px;
 }
