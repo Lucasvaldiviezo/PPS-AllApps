@@ -1,24 +1,5 @@
 ion-content{
-  --background: url('/assets/background.jpg') 30% 100% no-repeat;
-    text-align: center;
+  --ion-background-color: rgb(188, 130, 255);
 }
 
-ion-header{
-  text-align: center;
-}
-
-.titulo{
-  color: black;
-  font-size: 25px;
-}
-
-.btnCerrarSesion {
-  margin-top: 100%;
-  width: 180px;
-  height: 40px;
-  border-radius: 2px;
-  background: #da4a4a;
-  font-size: 15px;
-  color: white;
-}
 

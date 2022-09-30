@@ -1,56 +1,52 @@
 <ion-content>
-  <div class="fondo">
-    <br>
-    <ion-img src="/assets/app-icon.png" class="logo"></ion-img>
-    <div class="contenedorGeneral">
-      <div class="contenedorTitulo">
-        <br>
-        <ion-title class="titulo">Iniciar Sesion</ion-title>
-      </div>
-      <div class="contenedorInputs">
-        <form [formGroup]="formLogin" (ngSubmit)="loguearse()" class="texto">
-          <div>
-            <ion-input placeholder="Correo" formControlName="email">
-              <ion-icon name="person-add-outline"></ion-icon>
-            </ion-input>
-            <small class="invalid"
-              *ngIf="formLogin.controls['email'].errors?.['required'] && formLogin.controls['email'].touched">
-              <label>El correo es requerido</label>
-            </small>
-            <small *ngIf="formLogin.controls['email'].errors?.['email'] &&
-                  formLogin.controls['email'].touched">
-              <label class="invalid">El correo no tiene el formato correcto</label>
-            </small>
-          </div><br>
-          <div>
-            <ion-input type="password" placeholder="Contraseña" formControlName="password">
-              <ion-icon name="key-outline"></ion-icon>
-            </ion-input>
-            <small class="invalid"
-              *ngIf="formLogin.controls['password'].errors?.['required'] && formLogin.controls['password'].touched">
-              <label>La contraseña es requerida</label>
-            </small>
-          </div>
-          <!--ion-button type="sumbit" color="danger" fill="solid" class="botonEntrar" [disabled]="!formLogin.valid">Entrar</ion-button--><br>
-          <button type="sumbit" class="botonEntrar" [disabled]="!formLogin.valid">Entrar</button>
-        </form>
-      </div>
+  <ion-img src="/assets/app-icon.png" class="logo"></ion-img>
+  <div class="contenedorGeneral">
+    <div class="contenedorTitulo">
+      <ion-title class="titulo">Iniciar Sesion</ion-title>
     </div>
-    <ion-fab horizontal="end" vertical="bottom" slot="fixed">
-      <ion-fab-button color="danger">
-        <ion-icon md="caret-back" ios="chevron-back-circle-outline"></ion-icon>
-      </ion-fab-button>
-      <ion-fab-list side="start">
-        <ion-fab-button color="primary">
-          <ion-img src="/assets/son.png" (click)="logeoAutomatico('admin@admin.com','111111')"></ion-img>
-        </ion-fab-button>
-        <ion-fab-button color="secondary">
-          <ion-img src="/assets/daughter.png" (click)="logeoAutomatico('invitado@invitado.com','222222')"></ion-img>
-        </ion-fab-button>
-        <ion-fab-button color="tertiary">
-          <ion-img src="/assets/child.png" (click)="logeoAutomatico('usuario@usuario.com','333333')"></ion-img>
-        </ion-fab-button>
-      </ion-fab-list>
-    </ion-fab>
+    <div class="contenedorInputs">
+      <form [formGroup]="formLogin" (ngSubmit)="loguearse()" class="formContenedor">
+        <div>
+          <ion-input placeholder="Correo" formControlName="email">
+            <ion-icon name="person-add-outline" class="iconoInput"></ion-icon>
+          </ion-input>
+          <small class="invalid"
+            *ngIf="formLogin.controls['email'].errors?.['required'] && formLogin.controls['email'].touched">
+            <label>El correo es requerido</label>
+          </small>
+          <small *ngIf="formLogin.controls['email'].errors?.['email'] &&
+                  formLogin.controls['email'].touched">
+            <label class="invalid">El correo no tiene el formato correcto</label>
+          </small>
+        </div>
+        <div>
+          <ion-input type="password" placeholder="Contraseña" formControlName="password">
+            <ion-icon name="key-outline" class="iconoInput"></ion-icon>
+          </ion-input>
+          <small class="invalid"
+            *ngIf="formLogin.controls['password'].errors?.['required'] && formLogin.controls['password'].touched">
+            <label>La contraseña es requerida</label>
+          </small>
+        </div>
+        <!--ion-button type="sumbit" color="danger" fill="solid" class="botonEntrar" [disabled]="!formLogin.valid">Entrar</ion-button--><br>
+        <button type="sumbit" class="botonEntrar" [disabled]="!formLogin.valid">Entrar</button>
+      </form>
+    </div>
   </div>
+  <ion-fab horizontal="end" vertical="bottom" slot="fixed">
+    <ion-fab-button color="danger" class="botonPrincipal">
+      <ion-img src="assets/flecha-fab-button.svg"></ion-img>
+    </ion-fab-button>
+    <ion-fab-list side="start">
+      <ion-fab-button color="primary" class="botonesNiños">
+        <ion-img src="/assets/son.png" (click)="logeoAutomatico('admin@admin.com','111111')"></ion-img>
+      </ion-fab-button>
+      <ion-fab-button color="secondary" class="botonesNiños">
+        <ion-img src="/assets/daughter.png" (click)="logeoAutomatico('invitado@invitado.com','222222')"></ion-img>
+      </ion-fab-button>
+      <ion-fab-button color="tertiary" class="botonesNiños">
+        <ion-img src="/assets/child.png" (click)="logeoAutomatico('usuario@usuario.com','333333')"></ion-img>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
 </ion-content>

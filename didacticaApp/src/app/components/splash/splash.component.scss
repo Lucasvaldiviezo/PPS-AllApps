@@ -6,7 +6,7 @@ ion-content {
     text-align: center;
     height: 100%;
     
-    --background: url('/assets/background.jpg') 15% 100% no-repeat;
+    --ion-background-color: rgb(188, 130, 255);
    
     
     .contenedor {
@@ -19,11 +19,13 @@ ion-content {
 
     .divLogo {
         width: 100%;
-     
+        position: relative;
+        top:3%;
     }
 
     .divTexto {
-        margin-top: 30%;
+        position: relative;
+        top: 3%;
     }
 
     .divLoading {
@@ -32,27 +34,27 @@ ion-content {
         align-items: center;
         width: 100%;
         height: auto;
+        margin-top:30%;
     }
 
     .logoImg {
-        width: 200px;
-        margin-left:50%;
+        width: 70%;
+        margin-left:40%;
         -webkit-animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
         animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     }
 
     .loadingImg {
-        width: 200px;
+        width: 100%;
     }
 
     .texto {
+        position: relative;
         font-family: 'Advent Pro', sans-serif;
-        font-size: 30px;
+        font-size: 55px;
         color: black;
     }
 }
-
-
 /**
  * ----------------------------------------
  * animation slide-left

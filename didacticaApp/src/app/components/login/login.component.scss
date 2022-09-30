@@ -1,35 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@600&display=swap');
 
 ion-content{
-    --background: url('/assets/background.jpg') 30% 100% no-repeat;
-}
-
-.fondo {
-    width: 100%;
-    height: 100%;
-    text-align: center;
+    --ion-background-color: rgb(188, 130, 255);
+    overflow: hidden;
 }
 
 .logo {
-    width: 150px;
+    width: 60%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 5%;
 }
 
 .titulo {
-    font-size: 25px;
+    position: relative;
+    font-size: 38px;
     color: black;
-    margin-top:2%;
+}
+
+.formContenedor{
+    width: 100%;
 }
 
 .contenedorGeneral {
+    overflow: hidden;
     text-align: center;
     background-color: rgb(255, 255, 255);
-    width: 80%;
-    min-height: 340px;
+    width: 90%;
+    height: 55%;
     margin-top: 5%;
-    margin-left: 10%;
+    margin-left: auto;
+    margin-right: auto;
     -webkit-box-shadow: 10px 8px 19px -7px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 10px 8px 19px -7px rgba(0, 0, 0, 0.75);
     box-shadow: 10px 8px 19px -7px rgba(0, 0, 0, 0.75);
@@ -42,50 +43,72 @@ ion-content{
 .contenedorTitulo
 {
     width: 100%;
-    height: 80px;
+    height: 15%;
     background-color: rgb(38, 161, 38);
     border-top-left-radius: 2px;
     border-top-right-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .contenedorInputs {
-    margin-top: 13%;
     width: 100%;
     display: flex;
     justify-content: center;
 }
 
 ion-input {
-    background-color: rgba(255, 255, 255, 0.781);
-    border-radius: 10px;
-    width: 90%;
-    margin-left: 3.5%;
-    margin-right: 3.5%;
+    background-color: rgb(132, 221, 132);
+    border-radius: 2px;
+    width: 95%;
+    height: 70px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 5%;
+    margin-top: 15%;
     text-align: left;
     color: black;
     font-family: 'Advent Pro', sans-serif;
+    font-size: 25px;
 }
 
-ion-fab-button{
-    width: 50px;
-    height: 50px;
+.iconoInput{
+    margin-right: 3%;
+    margin-left: 1%;
+}
+
+.botonPrincipal{
+    width: 80px;
+    height: 80px;
+}
+
+ion-fab-list{
+    margin-right: 100%;
+}
+
+.botonesNiños{
+    width: 80px;
+    height: 80px;
 }
 
 .botonEntrar {
     margin-top: 5%;
     margin-bottom: 10%;
-    width: 180px;
-    height: 40px;
+    width: 80%;
+    height: 80px;
     border-radius: 2px;
     background: #da4a4a;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 .invalid {
-    text-align: center;
-    color: rgb(255, 52, 52);
-    font-size: 15px;
+    color: #ff3c35;
+    font-size: 20px;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 100%;
 }
 
 .iconoUsuario {
@@ -94,12 +117,4 @@ ion-fab-button{
 
 .iconoUsuario:active {
     transform: scale(0.9);
-}
-
-.contenedorBotones {
-    margin-top: 10%;
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
 }
