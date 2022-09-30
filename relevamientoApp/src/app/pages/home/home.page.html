@@ -8,18 +8,23 @@
     <ion-item class="header">
       <ion-title *ngIf="this.opcion == 1 && this.perfil == 0" class="tituloHeader">Cosas Lindas</ion-title>
       <ion-title *ngIf="this.opcion == 2 && this.perfil == 0" class="tituloHeader">Cosas Feas</ion-title>
+      <ion-title *ngIf="this.opcion == 3 && this.perfil == 0" class="tituloHeader">Graficos</ion-title>
       <ion-title *ngIf="this.perfil != 0" class="tituloHeader">Mis Fotos</ion-title>
     </ion-item>
   </ion-header>
   <div class="contenedorTitulo" *ngIf="this.opcion==0">
     <ion-title class="titulo">Inicio</ion-title>
   </div>
+  <ion-img src="assets/graphics.png" class="iconGraphics" (click)="mostrarGraficos()"  *ngIf="this.opcion==0"></ion-img>
   <div class="contenedorBotones" *ngIf="this.opcion==0">
     <button class="botonChatA" (click)="mostrarCosasLindas()"></button><br>
     <button class="botonChatB" (click)="mostrarCosasFeas()"></button>
   </div>
-  <div *ngIf="this.opcion != 0 && this.perfil == 0">
+  <div *ngIf="(this.opcion ==1 || this.opcion==2) && this.perfil == 0">
     <app-cosas-lindas-feas [opcion]="this.opcion"></app-cosas-lindas-feas>
+  </div>
+  <div *ngIf="this.opcion == 3 && this.perfil == 0">
+    <app-graficos></app-graficos>
   </div>
   <div *ngIf="this.perfil != 0">
     <app-perfil [perfil]="this.perfil"></app-perfil>

@@ -53,6 +53,10 @@ export class HomePage {
     this.opcion = 2;
   }
 
+  mostrarGraficos(){
+    this.opcion = 3;
+  }
+
   logout(){
     this.opcion=0;
     this.perfil=0;

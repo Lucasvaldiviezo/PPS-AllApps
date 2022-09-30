@@ -32,6 +32,10 @@ export class FirestoreService {
     });
   }
 
+  getCollection(coleccion:any){
+    return this.firestore.collection(coleccion).valueChanges();
+  }
+
   traerCosasLindas()
   {
     return this.cosasLindas;
@@ -60,5 +64,9 @@ export class FirestoreService {
         this.cosasFeasCollectionReference.add({...foto});
       }
     }
+  }
+
+  public obtenerTodos(collection) {
+    return this.firestore.collection(collection).snapshotChanges();
   }
 }

@@ -1,0 +1,19 @@
+<div *ngIf="mostrarImagen">
+  <ion-img src="{{imagenParaMostrar}}"></ion-img>
+</div>
+<ion-card class="contenedorChart">
+  <ion-card-header>
+    Cosas Feas
+  </ion-card-header>
+  <ion-card-content>
+    <canvas #barCanvas style="position: relative; height:20vh; width:40vw"></canvas>
+  </ion-card-content>
+</ion-card>
+<ion-card class="contenedorChart">
+  <ion-card-header>
+    Cosas Lindas
+  </ion-card-header>
+  <ion-card-content>
+    <canvas #torCanvas style="position: relative; height:20vh; width:40vw"></canvas>
+  </ion-card-content>
+</ion-card>

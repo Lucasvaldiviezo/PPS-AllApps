@@ -24,7 +24,7 @@ export class PerfilComponent implements OnInit {
       this.firestore.traerCosasFeas().subscribe(value =>{
         this.cosasFeas = value;
         this.cargarMisFotos();
-        this.misFotos.sort(this.ordenarLista); 
+        
       });
     });
   }
@@ -37,14 +37,12 @@ export class PerfilComponent implements OnInit {
     let fecha2 : any;
     let hora1 : any;
     let hora2 : any;
-
     let fechaNumeros1 : number[] = [];
     let fechaNumeros2 : number[] = [];
     let horaNumeros1 : number[] = [];
     let horaNumeros2 : number[] = [];
-    foto1Array = foto1.hora.split(' ');
-    foto2Array = foto2.hora.split(' ');
-
+    foto1Array = foto1.datos.hora.split(' ');
+    foto2Array = foto2.datos.hora.split(' ');
     fecha1 = foto1Array[0].split('/');
     fechaNumeros1.push(parseInt(fecha1[0]));
     fechaNumeros1.push(parseInt(fecha1[1]));
@@ -138,6 +136,7 @@ export class PerfilComponent implements OnInit {
         this.misFotos.push(itemFeo);
       }
     }
+    this.misFotos.sort(this.ordenarLista);
   }
 
 }

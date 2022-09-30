@@ -104,7 +104,13 @@ export class LoginComponent implements OnInit {
             this.logeoAutomatico('invitado@invitado.com', '222222');
             break;
           case 'usuario':
-            this.logeoAutomatico('usuario@usuario.com','3333');
+            this.logeoAutomatico('usuario@usuario.com', '333333');
+            break;
+          case 'anonimo':
+            this.logeoAutomatico('anonimo@anonimo.com', '444444');
+            break;
+          case 'tester':
+            this.logeoAutomatico('tester@tester.com', '555555');
             break;
         }
       }

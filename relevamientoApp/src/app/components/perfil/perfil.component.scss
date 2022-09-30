@@ -13,3 +13,16 @@ ion-card-subtitle{
 ion-card{
     margin:5%; 
 }
+
+
+.contenedorLikes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.numeroLikes {
+    color: white;
+    margin-left: 1%;
+    margin-top:1px;
+}
