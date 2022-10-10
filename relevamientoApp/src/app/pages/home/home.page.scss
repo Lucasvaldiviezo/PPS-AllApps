@@ -21,8 +21,7 @@ ion-header{
 }
 
 .header{
-  --ion-background-color: rgb(245, 162, 94);
-  --background: linear-gradient(#3538ff, #ff4e4e);
+  --ion-background-color: #bd4848;
 }
 
 .tituloHeader{
@@ -34,7 +33,7 @@ ion-header{
 
 .contenedorTitulo{
   width: 60%;
-  background: linear-gradient(#ff4e4e,#3538ff);
+  background-color: #bd4848;
   margin-left: auto;
   margin-right: auto;
   border-radius: 10px;
@@ -103,6 +102,12 @@ ion-header{
   font-family: 'Roboto', sans-serif;
   background-image: url('/assets/feas.jpg');
   background-size:100% 100%;
+}
+
+.miniTitulo{
+  color: white;
+  background-color: rgba(0, 0, 0, 0.568);
+  padding: 5px;
 }
 
 .iconoLike{

@@ -15,10 +15,11 @@
   <div class="contenedorTitulo" *ngIf="this.opcion==0">
     <ion-title class="titulo">Inicio</ion-title>
   </div>
+  <ion-spinner *ngIf="this.cargando" name="crescent"></ion-spinner>
   <ion-img src="assets/graphics.png" class="iconGraphics" (click)="mostrarGraficos()"  *ngIf="this.opcion==0"></ion-img>
   <div class="contenedorBotones" *ngIf="this.opcion==0">
-    <button class="botonChatA" (click)="mostrarCosasLindas()"></button><br>
-    <button class="botonChatB" (click)="mostrarCosasFeas()"></button>
+    <button class="botonChatA" (click)="mostrarCosasLindas()"><label class="miniTitulo">Cosas Lindas</label></button><br>
+    <button class="botonChatB" (click)="mostrarCosasFeas()"><label class="miniTitulo">Cosas Feas</label></button>
   </div>
   <div *ngIf="(this.opcion ==1 || this.opcion==2) && this.perfil == 0">
     <app-cosas-lindas-feas [opcion]="this.opcion"></app-cosas-lindas-feas>
@@ -29,7 +30,7 @@
   <div *ngIf="this.perfil != 0">
     <app-perfil [perfil]="this.perfil"></app-perfil>
   </div>
-  <ion-spinner *ngIf="this.cargando" name="crescent"></ion-spinner>
+  
   <ion-fab horizontal="end" vertical="bottom" slot="fixed" *ngIf="this.opcion != 0 || this.perfil != 0">
     <ion-fab-button color="dark">
       <ion-icon name="settings-sharp"></ion-icon>

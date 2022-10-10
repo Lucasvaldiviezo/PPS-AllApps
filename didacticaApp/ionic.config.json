@@ -1,7 +1,8 @@
 {
-  "name": "didacticaApp",
+  "name": "Didactica",
   "integrations": {
-    "capacitor": {}
+    "capacitor": {},
+    "cordova": {}
   },
   "type": "angular"
 }

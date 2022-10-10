@@ -1,6 +1,14 @@
 {
-	"appId": "didactica.app",
-	"appName": "didacticaApp",
-	"webDir": "www",
-	"bundledWebRuntime": false
+  "appId": "didactica.app",
+  "appName": "Didactica",
+  "webDir": "www",
+  "bundledWebRuntime": false,
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 1000,
+      "launchAutoHide": true,
+      "androidScaleType": "CENTER_CROP"
+    }
+  }
+  
 }

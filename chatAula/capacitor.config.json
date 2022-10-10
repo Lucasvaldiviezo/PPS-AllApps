@@ -2,5 +2,12 @@
 	"appId": "chat.aula.app",
 	"appName": "chatAulaApp",
 	"webDir": "www",
-	"bundledWebRuntime": false
+	"bundledWebRuntime": false,
+	"plugins": {
+		"SplashScreen": {
+		  "launchShowDuration": 1000,
+		  "launchAutoHide": true,
+		  "androidScaleType": "CENTER_CROP"
+		}
+	  }
 }

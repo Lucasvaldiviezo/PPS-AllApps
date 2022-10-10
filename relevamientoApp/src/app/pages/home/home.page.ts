@@ -41,6 +41,7 @@ export class HomePage {
   volverInicio()
   {
     this.opcion = 0;
+    this.perfil = 0;
   }
 
   mostrarCosasLindas()
